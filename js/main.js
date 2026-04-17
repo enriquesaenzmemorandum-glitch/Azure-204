@@ -38,7 +38,10 @@ const elements = {
     saveUserBtn: document.getElementById('save-user-btn'),
     skipUserBtn: document.getElementById('skip-user-btn'),
     syncIcon: document.getElementById('sync-icon'),
-    syncText: document.getElementById('sync-text')
+    syncText: document.getElementById('sync-text'),
+    userBanner: document.getElementById('user-banner'),
+    displayUserId: document.getElementById('display-user-id'),
+    switchUserBtn: document.getElementById('switch-user-btn')
 };
 
 async function init() {
@@ -52,8 +55,10 @@ async function init() {
         // --- Cloud Sync: Identificación de Usuario ---
         const storedUserId = StorageManager.getUserId();
         if (!storedUserId) {
+            elements.userBanner.style.display = 'none';
             elements.userModal.classList.add('active');
         } else {
+            showWelcomeMessage(storedUserId);
             await performInitialSync(storedUserId);
         }
         
@@ -117,6 +122,13 @@ function setupEventListeners() {
         elements.userModal.classList.remove('active');
     };
 
+    elements.switchUserBtn.onclick = () => {
+        if (confirm('¿Quieres cambiar de usuario? Se cerrará la sesión actual y se limpiará el progreso local.')) {
+            StorageManager.logoutUser();
+            window.location.reload();
+        }
+    };
+
     // Listen to sync status
     window.addEventListener('syncStatus', (e) => {
         const { success } = e.detail;
@@ -138,6 +150,15 @@ async function performInitialSync(userId) {
         elements.syncText.innerText = 'Nube';
     } else {
         elements.syncText.innerText = 'Local';
+    }
+}
+
+function showWelcomeMessage(userId) {
+    if (userId) {
+        elements.displayUserId.innerText = userId;
+        elements.userBanner.style.display = 'flex';
+    } else {
+        elements.userBanner.style.display = 'none';
     }
 }
 

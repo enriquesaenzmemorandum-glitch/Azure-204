@@ -95,6 +95,16 @@ export const StorageManager = {
     resetAll() {
         localStorage.removeItem(this.keys.ANSWERS);
         localStorage.removeItem(this.keys.SETTINGS);
+        localStorage.removeItem(this.keys.USER_ID);
         window.location.reload();
+    },
+
+    /**
+     * Limpia solo los datos de progreso para permitir cambio de usuario limpio
+     */
+    logoutUser() {
+        localStorage.removeItem(this.keys.ANSWERS);
+        localStorage.removeItem(this.keys.SETTINGS);
+        localStorage.removeItem(this.keys.USER_ID);
     }
 };

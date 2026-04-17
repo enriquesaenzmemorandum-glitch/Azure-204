@@ -11,6 +11,15 @@
 </head>
 <body>
     <div class="container">
+        <!-- User Identity Banner -->
+        <div class="user-banner" id="user-banner" style="display: none;">
+            <div class="user-info">
+                <span>👤 Estás estudiando como:</span>
+                <span class="user-email" id="display-user-id"></span>
+            </div>
+            <button class="btn-switch" id="switch-user-btn">Cambiar Usuario</button>
+        </div>
+
         <!-- Header & Stats Shell -->
         <header class="header">
             <h1>AZ-204 Simulator</h1>
@@ -94,9 +103,9 @@
         <main id="question-container"></main>
 
         <!-- Navigation Buttons -->
-        <div class="controls-bar" style="margin-top: 20px;">
-            <button class="btn" id="prev-btn">Anterior</button>
-            <button class="btn btn-primary" id="next-btn">Siguiente</button>
+        <div class="controls-bar nav-controls" style="margin-top: 20px;">
+            <button class="btn" id="prev-btn">⬅️ Anterior</button>
+            <button class="btn btn-primary" id="next-btn">Siguiente ➡️</button>
         </div>
 
     </div>
