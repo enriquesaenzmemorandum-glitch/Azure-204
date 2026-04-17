@@ -1,5 +1,6 @@
 import { StorageManager } from './storage.js';
 import { QuizEngine } from './engine.js';
+import { SyncManager } from './sync.js';
 
 let questions = [];
 let engine = null;
@@ -31,7 +32,13 @@ const elements = {
     statsCanvas: document.getElementById('stats-canvas'),
     filterSelect: document.getElementById('filter-select'),
     topicSelect: document.getElementById('topic-select'),
-    progressText: document.getElementById('progress-text')
+    progressText: document.getElementById('progress-text'),
+    userModal: document.getElementById('user-modal'),
+    userIdInput: document.getElementById('user-id-input'),
+    saveUserBtn: document.getElementById('save-user-btn'),
+    skipUserBtn: document.getElementById('skip-user-btn'),
+    syncIcon: document.getElementById('sync-icon'),
+    syncText: document.getElementById('sync-text')
 };
 
 async function init() {
@@ -41,6 +48,14 @@ async function init() {
         
         state.answers = StorageManager.getAnswers();
         state.settings = StorageManager.getSettings();
+        
+        // --- Cloud Sync: Identificación de Usuario ---
+        const storedUserId = StorageManager.getUserId();
+        if (!storedUserId) {
+            elements.userModal.classList.add('active');
+        } else {
+            await performInitialSync(storedUserId);
+        }
         
         engine = new QuizEngine(questions, state.answers, state.settings);
         
@@ -88,6 +103,42 @@ function setupEventListeners() {
     document.getElementById('reset-btn').onclick = () => {
         if (confirm('¿Reiniciar todo el progreso?')) StorageManager.resetAll();
     };
+
+    // User Identity Events
+    elements.saveUserBtn.onclick = async () => {
+        const id = elements.userIdInput.value.trim();
+        if (!id) return alert('Introduce un identificador');
+        StorageManager.saveUserId(id);
+        elements.userModal.classList.remove('active');
+        await performInitialSync(id);
+    };
+
+    elements.skipUserBtn.onclick = () => {
+        elements.userModal.classList.remove('active');
+    };
+
+    // Listen to sync status
+    window.addEventListener('syncStatus', (e) => {
+        const { success } = e.detail;
+        elements.syncIcon.innerText = success ? '✅' : '⚠️';
+        elements.syncText.innerText = success ? 'Nube' : 'Error Sync';
+    });
+}
+
+async function performInitialSync(userId) {
+    elements.syncText.innerText = 'Sincronizando...';
+    const cloudData = await SyncManager.fetchProgress(userId);
+    if (cloudData) {
+        // La nube manda según requerimiento del usuario
+        state.answers = cloudData.answers || {};
+        state.settings = cloudData.settings || state.settings;
+        StorageManager.saveAnswers(state.answers, true); // suppressSync = true
+        StorageManager.saveSettings(state.settings, true);
+        elements.syncIcon.innerText = '✅';
+        elements.syncText.innerText = 'Nube';
+    } else {
+        elements.syncText.innerText = 'Local';
+    }
 }
 
 function applyFilters() {

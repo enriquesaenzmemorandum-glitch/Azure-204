@@ -16,6 +16,10 @@
             <h1>AZ-204 Simulator</h1>
             <p style="color: var(--text-muted)">Preparación para Microsoft Certified: Azure Developer Associate</p>
             
+            <div id="sync-status" style="position: absolute; top: 20px; right: 20px; font-size: 0.8rem; color: var(--text-muted);">
+                <span id="sync-icon">☁️</span> <span id="sync-text">Local</span>
+            </div>
+            
             <div class="dashboard-stats">
                 <div class="stat-card">
                     <span class="stat-value" id="total-count">0</span>
@@ -124,6 +128,25 @@
             <div style="display: flex; gap: 10px; margin-top: 30px;">
                 <button class="btn btn-primary" style="flex: 1" id="confirm-exam">Iniciar</button>
                 <button class="btn" style="flex: 1" id="cancel-exam">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Identity Modal -->
+    <div class="modal-overlay" id="user-modal">
+        <div class="modal-content">
+            <h2>Sincronización en la Nube</h2>
+            <p style="margin-bottom: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                Introduce tu email o nombre de usuario para guardar tu progreso y recuperarlo desde otros dispositivos.
+            </p>
+            <div class="form-group">
+                <label>Identificador de Usuario</label>
+                <input type="text" id="user-id-input" placeholder="ej: usuario@correo.com" 
+                       style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:var(--bg-body); color:white;">
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 30px;">
+                <button class="btn btn-primary" style="flex: 1" id="save-user-btn">Conectar</button>
+                <button class="btn" style="flex: 1" id="skip-user-btn">Solo Local</button>
             </div>
         </div>
     </div>

@@ -2,19 +2,23 @@ export const StorageManager = {
     keys: {
         ANSWERS: 'az204_userAnswers',
         SETTINGS: 'az204_settings',
-        STATS: 'az204_cumulativeStats'
+        STATS: 'az204_cumulativeStats',
+        USER_ID: 'az204_userId'
     },
+    isSyncing: false,
 
-    saveAnswers(answers) {
+    saveAnswers(answers, suppressSync = false) {
         localStorage.setItem(this.keys.ANSWERS, JSON.stringify(answers));
+        if (!suppressSync) this.triggerSync();
     },
 
     getAnswers() {
         return JSON.parse(localStorage.getItem(this.keys.ANSWERS)) || {};
     },
 
-    saveSettings(settings) {
+    saveSettings(settings, suppressSync = false) {
         localStorage.setItem(this.keys.SETTINGS, JSON.stringify(settings));
+        if (!suppressSync) this.triggerSync();
     },
 
     getSettings() {
@@ -27,6 +31,33 @@ export const StorageManager = {
                 topics: ['all']
             }
         };
+    },
+
+    saveUserId(id) {
+        localStorage.setItem(this.keys.USER_ID, id);
+    },
+
+    getUserId() {
+        return localStorage.getItem(this.keys.USER_ID);
+    },
+
+    async triggerSync() {
+        if (this.isSyncing) return;
+        const userId = this.getUserId();
+        if (!userId) return;
+        
+        this.isSyncing = true;
+        try {
+            const { SyncManager } = await import('./sync.js');
+            const success = await SyncManager.uploadProgress(
+                userId, 
+                this.getAnswers(), 
+                this.getSettings()
+            );
+            window.dispatchEvent(new CustomEvent('syncStatus', { detail: { success } }));
+        } finally {
+            this.isSyncing = false;
+        }
     },
 
     exportData() {
