@@ -110,12 +110,19 @@ function setupEventListeners() {
     };
 
     // User Identity Events
-    elements.saveUserBtn.onclick = async () => {
         const id = elements.userIdInput.value.trim();
         if (!id) return alert('Introduce un identificador');
         StorageManager.saveUserId(id);
         elements.userModal.classList.remove('active');
+        
+        // Cargar progreso de la nube
         await performInitialSync(id);
+        
+        // CRÍTICO: Reiniciar el motor con los nuevos datos descargados
+        engine = new QuizEngine(questions, state.answers, state.settings);
+        showWelcomeMessage(id);
+        applyFilters(); 
+        updateUI();
     };
 
     elements.skipUserBtn.onclick = () => {
