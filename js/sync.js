@@ -1,27 +1,27 @@
 // sync.js
 // Servicio para gestionar la comunicación con el servidor PHP
 
-const API_URL = 'api/progress.php'; // Cambiar por la URL absoluta si se usa desde otro dominio
+const API_URL = 'api/progress.php'; 
+/** 
+ * ⚠️ IMPORTANTE: 
+ * Si tu web está en NETLIFY, la URL relativa 'api/progress.php' NO FUNCIONARÁ.
+ * Debes cambiarla por la URL absoluta de tu servidor PHP.
+ * Ejemplo: const API_URL = 'https://tu-hosting.com/subcarpeta/api/progress.php';
+ */
 
 export const SyncManager = {
-    /**
-     * Descarga el progreso del servidor para un usuario específico
-     */
     async fetchProgress(userId) {
         try {
             const response = await fetch(`${API_URL}?user_id=${encodeURIComponent(userId)}`);
-            if (!response.ok) throw new Error('Error en la red');
+            if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
             const result = await response.json();
             return result.success ? result.data : null;
         } catch (error) {
-            console.error('Err Sync Fetch:', error);
+            console.error('Fetch Error:', error);
             return null;
         }
     },
 
-    /**
-     * Sube el progreso local al servidor
-     */
     async uploadProgress(userId, answers, settings) {
         if (!userId) return;
 
@@ -35,10 +35,16 @@ export const SyncManager = {
                     settings: settings
                 })
             });
+            
+            if (!response.ok) {
+                console.error('Server returned error status:', response.status);
+                return false;
+            }
+
             const result = await response.json();
             return result.success;
         } catch (error) {
-            console.warn('Err Sync Upload (Offline?):', error);
+            console.error('Upload failed (check URL or CORS):', error);
             return false;
         }
     }
