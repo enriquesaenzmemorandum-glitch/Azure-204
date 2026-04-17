@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ-204 Master Simulator Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header & Stats Shell -->
+        <header class="header">
+            <h1>AZ-204 Simulator</h1>
+            <p style="color: var(--text-muted)">Preparación para Microsoft Certified: Azure Developer Associate</p>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <span class="stat-value" id="total-count">0</span>
+                    <span class="stat-label">Preguntas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="answered-count">0</span>
+                    <span class="stat-label">Vistas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="correct-count">0</span>
+                    <span class="stat-label">Correctas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="score-value">0%</span>
+                    <span class="stat-label">Ratio Éxito</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <div id="progress-text" style="font-size: 0.9rem; margin-top: 10px; color: var(--text-muted); font-weight: 600;">
+                Has respondido 0 de 337 preguntas
+            </div>
+            </div>
+
+            <div id="timer-container" style="display: none; margin-top: 10px; color: var(--secondary); font-weight: 800; font-size: 1.2rem;">
+                ⏱️ <span id="timer-value">00:00</span>
+            </div>
+        </header>
+
+        <!-- Dynamic Controls -->
+        <div class="controls-bar">
+            <button class="btn btn-primary" id="exam-start-btn">🎯 Modo Examen</button>
+            <button class="btn btn-outline" id="export-btn">💾 Exportar</button>
+            <label class="btn btn-outline" style="margin:0">
+                📁 Importar <input type="file" id="import-input" style="display:none">
+            </label>
+            <button class="btn btn-outline" id="reset-btn" style="color: var(--error)">🗑️ Reset</button>
+        </div>
+
+        <!-- Dropdown Filters (Simplified Menu) -->
+        <div class="controls-bar" style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; gap: 20px;">
+            <div class="form-group" style="margin-bottom: 0; flex: 1;">
+                <label>Filtrar por Estado</label>
+                <select id="filter-select">
+                    <option value="all">Todas las preguntas</option>
+                    <option value="pending">Pendientes</option>
+                    <option value="incorrect">Incorrectas</option>
+                    <option value="correct">Correctas</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-bottom: 0; flex: 1;">
+                <label>Filtrar por Tema</label>
+                <select id="topic-select">
+                    <option value="all">Todos los temas</option>
+                    <option value="compute">Compute</option>
+                    <option value="storage">Storage</option>
+                    <option value="cosmos">Cosmos DB</option>
+                    <option value="serverless">Serverless</option>
+                    <option value="messaging">Mensajería</option>
+                    <option value="apim">API Management</option>
+                    <option value="security">Seguridad</option>
+                    <option value="monitoring">Monitoreo</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Question Container -->
+        <main id="question-container"></main>
+
+        <!-- Navigation Buttons -->
+        <div class="controls-bar" style="margin-top: 20px;">
+            <button class="btn" id="prev-btn">Anterior</button>
+            <button class="btn btn-primary" id="next-btn">Siguiente</button>
+        </div>
+
+    </div>
+
+    <!-- Exam Config Modal -->
+    <div class="modal-overlay" id="exam-modal">
+        <div class="modal-content">
+            <h2>Configurar Examen</h2>
+            <div class="form-group">
+                <label>Número de Preguntas</label>
+                <select id="exam-count">
+                    <option value="25">25 preguntas</option>
+                    <option value="50">50 preguntas</option>
+                    <option value="75">75 preguntas</option>
+                    <option value="100">100 preguntas</option>
+                    <option value="all">Todas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Tiempo Límite</label>
+                <select id="exam-time">
+                    <option value="30">30 minutos</option>
+                    <option value="60">60 minutos</option>
+                    <option value="90">90 minutos</option>
+                    <option value="120">120 minutos</option>
+                    <option value="unlimited">Sin límite</option>
+                </select>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 30px;">
+                <button class="btn btn-primary" style="flex: 1" id="confirm-exam">Iniciar</button>
+                <button class="btn" style="flex: 1" id="cancel-exam">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,5004 @@
+[
+  {
+    "id": 1,
+    "topic": "compute",
+    "text": "Tienes dos hosts Hyper-V llamados Host1 y Host2. Host1 tiene una VM llamada VM1 desplegada con plantilla ARM. ¿Cómo mueves VM1 a Host2?",
+    "options": [
+      "A. Desde Update management, click Enable",
+      "B. Desde Overview, mover a otra suscripción",
+      "C. Desde Redeploy, click Redeploy",
+      "D. Desde Profile, modificar ubicación de uso"
+    ],
+    "correct": "C",
+    "explanation": "Redeploy mueve la VM a un nuevo nodo dentro de la infraestructura de Azure.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 2,
+    "topic": "compute",
+    "text": "Tu empresa tiene un clúster AKS. Solución: Instalas Azure CLI y ejecutas kubectl apply -f myapp.yaml. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "kubectl apply es el comando correcto para desplegar un manifiesto YAML.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 3,
+    "topic": "compute",
+    "text": "Tu empresa tiene un clúster AKS. Solución: Instalas docker client y ejecutas docker run -it microsoft/azure-cli:0.10.17. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Docker no se usa para desplegar manifiestos YAML de Kubernetes.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 4,
+    "topic": "compute",
+    "text": "Tu empresa tiene WebApp1. Usas WebJobs SDK para tarea en segundo plano. ¿Qué servicio procesa la cola?",
+    "options": [
+      "A. Logic Apps",
+      "B. WebJobs",
+      "C. Flow",
+      "D. Functions"
+    ],
+    "correct": "B",
+    "explanation": "WebJobs SDK está diseñado específicamente para tareas en segundo plano desencadenadas por colas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 5,
+    "topic": "compute",
+    "text": "Desplegando VMs con ARM template en availability set. ¿Valor para platformFaultDomainCount para máxima disponibilidad?",
+    "options": [
+      "A. 10",
+      "B. 30",
+      "C. Min Value",
+      "D. Max Value"
+    ],
+    "correct": "D",
+    "explanation": "Max Value usa el máximo disponible en la región (normalmente 3).",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 6,
+    "topic": "compute",
+    "text": "Mismo escenario. ¿Valor para platformUpdateDomainCount?",
+    "options": [
+      "A. 10",
+      "B. 20",
+      "C. 30",
+      "D. 40"
+    ],
+    "correct": "B",
+    "explanation": "Por defecto son 5, pero se pueden aumentar hasta 20.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 7,
+    "topic": "compute",
+    "text": "Web app en plan D1. Necesitas autoscaling al 80% CPU minimizando costos. ¿Qué haces primero?",
+    "options": [
+      "A. Habilitar autoscaling",
+      "B. Cambiar a Premium",
+      "C. Cambiar a Standard",
+      "D. Cambiar a Consumption"
+    ],
+    "correct": "C",
+    "explanation": "El plan Standard soporta autoscaling y minimiza costos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 8,
+    "topic": "compute",
+    "text": "App de streaming video. Solución: Azure Redis Cache. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Redis Cache es para caché, no para distribución geográfica.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 9,
+    "topic": "compute",
+    "text": "App de streaming video. Solución: Azure CDN. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "CDN distribuye contenido globalmente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 10,
+    "topic": "compute",
+    "text": "App de streaming video. Solución: SAN. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "SAN no es un servicio de Azure para distribución de contenido.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 11,
+    "topic": "compute",
+    "text": "Desarrollas app Docker/Go. Ningún RG soporta Linux. Minimizar RGs. ¿Primer comando?",
+    "options": [
+      "A. az group create",
+      "B. az appservice plan create",
+      "C. az webapp create",
+      "D. az acr build"
+    ],
+    "correct": "A",
+    "explanation": "Primero crear grupo de recursos en ubicación que soporte Linux.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 12,
+    "topic": "compute",
+    "text": "Fourth Coffee migra app Docker. ¿Primer comando CLI?",
+    "options": [
+      "A. az webapp create",
+      "B. az webapp config container set",
+      "C. az webapp config hostname add",
+      "D. az group create"
+    ],
+    "correct": "A",
+    "explanation": "Primero crear la web app, luego configurar el contenedor, luego el dominio.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 13,
+    "topic": "compute",
+    "text": "Sitio web con alto tráfico. Minimizar costos y alta disponibilidad. ¿Mejor opción?",
+    "options": [
+      "A. VM con autoscaling",
+      "B. App Service Shared",
+      "C. VM con Scale Set",
+      "D. App Service Standard con autoscaling"
+    ],
+    "correct": "D",
+    "explanation": "App Service Standard ofrece autoscaling y alta disponibilidad con menor costo que VMs.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 14,
+    "topic": "compute",
+    "text": "App Java en GitHub. Desplegar a slot staging. ¿Comando para crear slot?",
+    "options": [
+      "A. az webapp create",
+      "B. az webapp deployment slot create",
+      "C. az webapp deployment source config",
+      "D. az webapp config set"
+    ],
+    "correct": "B",
+    "explanation": "az webapp deployment slot create crea el slot de despliegue.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 15,
+    "topic": "compute",
+    "text": "Habilitar managed identity para VM. ¿Parámetro PowerShell?",
+    "options": [
+      "A. -IdentityType SystemAssigned",
+      "B. -IdentityType UserAssigned",
+      "C. -IdentityType None",
+      "D. -AssignIdentity $true"
+    ],
+    "correct": "A",
+    "explanation": "SystemAssigned es la identidad administrada asignada por el sistema.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 16,
+    "topic": "compute",
+    "text": "Configurar Azure Disk Encryption para VM Linux. ¿Primer comando?",
+    "options": [
+      "A. az vm create",
+      "B. az keyvault create",
+      "C. az vm encryption enable",
+      "D. az keyvault key create"
+    ],
+    "correct": "B",
+    "explanation": "Primero crear Key Vault con disk encryption habilitado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 17,
+    "topic": "compute",
+    "text": "Recolectar datos POS de 2000 tiendas. Solución: Event Hub con partition key. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Event Hub con capture es ideal para telemetría masiva.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 18,
+    "topic": "compute",
+    "text": "Mismo escenario. Solución: Service Bus con tópico. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Service Bus es para mensajería empresarial, no para ingesta masiva.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 19,
+    "topic": "compute",
+    "text": "Mismo escenario. Solución: Notification Hub. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Notification Hub es para notificaciones push.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 20,
+    "topic": "compute",
+    "text": "App Java con Cassandra. Cosmos DB Cassandra API. Grupo AD sin acceso a claves. ¿Qué rol RBAC?",
+    "options": [
+      "A. DocumentDB Accounts Contributor",
+      "B. Cosmos Backup Operator",
+      "C. Cosmos DB Operator",
+      "D. Cosmos DB Account Reader"
+    ],
+    "correct": "C",
+    "explanation": "Cosmos DB Operator permite aprovisionar pero no acceder a las claves.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 21,
+    "topic": "compute",
+    "text": "Juego online con votos. Azure Functions con entidades durables. Ventana 30 segundos. Minimizar latencia. ¿Función?",
+    "options": [
+      "A. context.SignalEntityAsync",
+      "B. context.CallEntityAsync",
+      "C. context.CallActivityAsync",
+      "D. context.CallSubOrchestratorAsync"
+    ],
+    "correct": "B",
+    "explanation": "CallEntityAsync es para llamadas síncronas a entidades.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 22,
+    "topic": "compute",
+    "text": "Plan App Service Free. Function App con trigger cola. Minimizar costos. ¿Qué habilitar?",
+    "options": [
+      "A. Always On",
+      "B. Managed identity",
+      "C. Continuous deployment",
+      "D. Autoscaling"
+    ],
+    "correct": "A",
+    "explanation": "Always On debe estar habilitado para que las funciones en plan Free funcionen.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 23,
+    "topic": "compute",
+    "text": "Azure Container Apps. HTTPS con dominio personalizado. ¿Primera acción?",
+    "options": [
+      "A. Validar dominio",
+      "B. Habilitar ingress",
+      "C. Enlazar certificado",
+      "D. Añadir DNS"
+    ],
+    "correct": "A",
+    "explanation": "Primero validar el dominio personalizado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 24,
+    "topic": "compute",
+    "text": "Container Apps. Misma VNet y mismo Log Analytics. ¿Qué usar?",
+    "options": [
+      "A. Single revision mode",
+      "B. Entorno separado por contenedor",
+      "C. Imagen única",
+      "D. Un solo entorno para todos"
+    ],
+    "correct": "D",
+    "explanation": "Un solo entorno permite compartir VNet y Log Analytics.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 25,
+    "topic": "compute",
+    "text": "Container Apps con ingress deshabilitado. App escalada a 0. Solución: Habilitar ingress y regla HTTP. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "El escalado HTTP requiere ingress habilitado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 26,
+    "topic": "compute",
+    "text": "Mismo escenario. Solución: Regla de escala personalizada. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Para HTTP se necesita regla HTTP específica.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 27,
+    "topic": "compute",
+    "text": "Actualización de microservicio sin downtime. ¿Qué modo?",
+    "options": [
+      "A. Single revision mode",
+      "B. Multiple revision mode",
+      "C. Rolling update",
+      "D. Blue-green"
+    ],
+    "correct": "B",
+    "explanation": "Multiple revision mode permite despliegues sin downtime.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 28,
+    "topic": "compute",
+    "text": "Distribuir tráfico entre revisiones. ¿Comando?",
+    "options": [
+      "A. --revision-weight",
+      "B. --traffic-split",
+      "C. --revision-traffic",
+      "D. --weight"
+    ],
+    "correct": "A",
+    "explanation": "--revision-weight asigna peso de tráfico a cada revisión.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 29,
+    "topic": "compute",
+    "text": "Function App con trigger HTTP. Escalado eventos + imágenes Linux. ¿Plan?",
+    "options": [
+      "A. Consumption",
+      "B. Premium",
+      "C. Dedicated",
+      "D. App Service"
+    ],
+    "correct": "B",
+    "explanation": "Premium soporta VNet e imágenes personalizadas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 30,
+    "topic": "compute",
+    "text": "Function App con trigger Blob. Uso infrecuente. ¿Plan óptimo?",
+    "options": [
+      "A. Consumption",
+      "B. Premium",
+      "C. Dedicated",
+      "D. App Service"
+    ],
+    "correct": "A",
+    "explanation": "Consumption minimiza costos para uso infrecuente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 31,
+    "topic": "compute",
+    "text": "App Python con GPU. Contenedor Linux. Detener al terminar. Minimizar costos. ¿Servicio?",
+    "options": [
+      "A. AKS",
+      "B. ACI",
+      "C. App Service",
+      "D. Container Instances con GPU"
+    ],
+    "correct": "D",
+    "explanation": "ACI con GPU es la opción más económica para tareas batch.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 32,
+    "topic": "compute",
+    "text": "Plan App Service Free. ¿Qué NO está disponible?",
+    "options": [
+      "A. Always On",
+      "B. Custom domains",
+      "C. Autoscaling",
+      "D. SSL"
+    ],
+    "correct": "C",
+    "explanation": "El plan Free no soporta autoscaling.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 33,
+    "topic": "compute",
+    "text": "AKS cluster. Necesitas monitorizar contenedores. ¿Qué usar?",
+    "options": [
+      "A. Azure Monitor for Containers",
+      "B. Application Insights",
+      "C. Log Analytics",
+      "D. Container Insights"
+    ],
+    "correct": "A",
+    "explanation": "Azure Monitor for Containers (Container Insights) es la herramienta específica.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 34,
+    "topic": "compute",
+    "text": "VM con alta latencia de red y CPU. ¿Qué habilitar?",
+    "options": [
+      "A. Azure Backup",
+      "B. Accelerated networking",
+      "C. Managed disks",
+      "D. Availability zones"
+    ],
+    "correct": "B",
+    "explanation": "Accelerated networking reduce latencia, jitter y CPU.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 35,
+    "topic": "compute",
+    "text": "VM crítica sin backup. Restaurar desde snapshot 7 días. ¿Qué servicio?",
+    "options": [
+      "A. Azure Site Recovery",
+      "B. Azure Backup",
+      "C. Snapshots",
+      "D. Azure Disk Backup"
+    ],
+    "correct": "B",
+    "explanation": "Azure Backup permite restauración in-place desde snapshots.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 36,
+    "topic": "compute",
+    "text": "App Service Linux. Ver logs de consola en tiempo real. ¿Comando?",
+    "options": [
+      "A. az webapp log config --docker-container-logging filesystem",
+      "B. az webapp log download",
+      "C. az webapp log tail",
+      "D. az webapp browse"
+    ],
+    "correct": "A",
+    "explanation": "az webapp log config --docker-container-logging filesystem habilita logs.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 37,
+    "topic": "compute",
+    "text": "AKS. Pod necesita acceso a Azure Key Vault. ¿Mejor práctica?",
+    "options": [
+      "A. Pod Identity",
+      "B. Connection string",
+      "C. Service Principal",
+      "D. Managed Identity"
+    ],
+    "correct": "A",
+    "explanation": "Pod Identity asigna identidades administradas a pods específicos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 38,
+    "topic": "compute",
+    "text": "App Service Web App. Sesiones sticky. Escalar a 4 instancias. ¿Qué configurar?",
+    "options": [
+      "A. ARR Affinity",
+      "B. Health check",
+      "C. Always On",
+      "D. Web sockets"
+    ],
+    "correct": "B",
+    "explanation": "Health check aumenta disponibilidad redirigiendo tráfico.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 39,
+    "topic": "compute",
+    "text": "AKS. Ingress controller con TLS. ¿Qué componente?",
+    "options": [
+      "A. Helm",
+      "B. kubectl",
+      "C. Ingress Controller",
+      "D. CoreDNS"
+    ],
+    "correct": "C",
+    "explanation": "Ingress Controller proporciona reverse proxy y TLS termination.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 40,
+    "topic": "compute",
+    "text": "VM Windows. Necesitas ejecutar script al inicio. ¿Qué extensión?",
+    "options": [
+      "A. Custom Script Extension",
+      "B. DSC Extension",
+      "C. PowerShell Extension",
+      "D. Run Command"
+    ],
+    "correct": "A",
+    "explanation": "Custom Script Extension ejecuta scripts al aprovisionar la VM.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 41,
+    "topic": "compute",
+    "text": "App Service. Cambios de configuración. ¿Dónde ver logs?",
+    "options": [
+      "A. AppServiceAppLogs",
+      "B. AppServiceEnvironmentPlatformlogs",
+      "C. AppServiceConsoleLogs",
+      "D. AppServiceAuditLogs"
+    ],
+    "correct": "B",
+    "explanation": "AppServiceEnvironmentPlatformLogs registra cambios de configuración.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 42,
+    "topic": "compute",
+    "text": "AKS. Escalar pods basado en métricas personalizadas. ¿Qué usar?",
+    "options": [
+      "A. HPA",
+      "B. VPA",
+      "C. KEDA",
+      "D. Cluster Autoscaler"
+    ],
+    "correct": "C",
+    "explanation": "KEDA permite escalado basado en eventos (colas, etc.).",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 43,
+    "topic": "compute",
+    "text": "App Service. Deployment slots. Auto swap en Production. Scripts pre-swap. ¿Qué configurar?",
+    "options": [
+      "A. web.config applicationInitialization",
+      "B. WEBSITE_SWAP_WARMUP_PING_PATH",
+      "C. Always On",
+      "D. Health check"
+    ],
+    "correct": "A",
+    "explanation": "applicationInitialization en web.config permite warm-up personalizado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 44,
+    "topic": "compute",
+    "text": "Container Instances. Dos contenedores comparten ciclo de vida. ¿Tipo de grupo?",
+    "options": [
+      "A. Pod",
+      "B. Container group",
+      "C. Sidecar",
+      "D. Ambassador"
+    ],
+    "correct": "B",
+    "explanation": "Container group permite compartir ciclo de vida y recursos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 45,
+    "topic": "compute",
+    "text": "AKS. Almacenamiento persistente para pods. ¿Qué recurso K8s?",
+    "options": [
+      "A. PersistentVolume",
+      "B. PersistentVolumeClaim",
+      "C. StorageClass",
+      "D. Volume"
+    ],
+    "correct": "B",
+    "explanation": "PVC es la solicitud de almacenamiento por el pod.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 46,
+    "topic": "compute",
+    "text": "App Service. Aplicación en contenedor Linux. Puerto expuesto 8080. ¿Configuración?",
+    "options": [
+      "A. WEBSITES_PORT=8080",
+      "B. PORT=8080",
+      "C. WEBSITE_PORT=8080",
+      "D. CONTAINER_PORT=8080"
+    ],
+    "correct": "A",
+    "explanation": "WEBSITES_PORT indica el puerto del contenedor.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 47,
+    "topic": "compute",
+    "text": "VM Scale Set. Actualizar VMs sin downtime. ¿Modo de actualización?",
+    "options": [
+      "A. Automatic",
+      "B. Rolling",
+      "C. Manual",
+      "D. Blue-green"
+    ],
+    "correct": "B",
+    "explanation": "Rolling update actualiza gradualmente sin downtime.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 48,
+    "topic": "compute",
+    "text": "AKS. Red privada. Ninguna IP pública. ¿Tipo de clúster?",
+    "options": [
+      "A. Public cluster",
+      "B. Private cluster",
+      "C. Internal cluster",
+      "D. Isolated cluster"
+    ],
+    "correct": "B",
+    "explanation": "Private cluster no expone el API server públicamente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 49,
+    "topic": "compute",
+    "text": "App Service. Plan Isolated. ¿Qué proporciona?",
+    "options": [
+      "A. VNet isolation",
+      "B. Dedicated hardware",
+      "C. Autoscaling",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "Plan Isolated (ASE) proporciona todas esas características.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 50,
+    "topic": "compute",
+    "text": "Container Instances. Variable de entorno segura. ¿Qué propiedad?",
+    "options": [
+      "A. secureValue",
+      "B. secretValue",
+      "C. encryptedValue",
+      "D. protectedValue"
+    ],
+    "correct": "A",
+    "explanation": "secureValue no se muestra en logs ni en el portal.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 51,
+    "topic": "compute",
+    "text": "AKS. Node pool con GPUs. ¿Qué comando?",
+    "options": [
+      "A. az aks nodepool add --node-vm-size Standard_NC6",
+      "B. az aks create --enable-gpu",
+      "C. kubectl add node --gpu",
+      "D. az vm create --gpu"
+    ],
+    "correct": "A",
+    "explanation": "az aks nodepool add permite añadir nodos con GPU.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 52,
+    "topic": "compute",
+    "text": "App Service. Clonar slot a producción. ¿Comando?",
+    "options": [
+      "A. az webapp deployment slot swap",
+      "B. az webapp deployment slot copy",
+      "C. az webapp deployment slot clone",
+      "D. az webapp deployment slot deploy"
+    ],
+    "correct": "A",
+    "explanation": "swap intercambia el slot con producción.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 53,
+    "topic": "compute",
+    "text": "VM. Disco administrado Premium. Cambiar a Standard sin downtime. ¿Posible?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Se puede cambiar el tipo de disco en caliente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 54,
+    "topic": "compute",
+    "text": "AKS. Dashboard web UI. ¿Comando para acceder?",
+    "options": [
+      "A. az aks browse",
+      "B. kubectl dashboard",
+      "C. az aks dashboard",
+      "D. kubernetes-dashboard"
+    ],
+    "correct": "A",
+    "explanation": "az aks browse abre el dashboard de Kubernetes.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 55,
+    "topic": "compute",
+    "text": "App Service. Configuración de slot no se intercambia. ¿Qué configuración?",
+    "options": [
+      "A. Slot setting",
+      "B. Sticky setting",
+      "C. Permanent setting",
+      "D. Fixed setting"
+    ],
+    "correct": "A",
+    "explanation": "Slot setting permanece en el slot durante el swap.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 56,
+    "topic": "compute",
+    "text": "Container Instances. Reiniciar contenedor automáticamente al fallar. ¿Política?",
+    "options": [
+      "A. Always",
+      "B. OnFailure",
+      "C. Never",
+      "D. Restart"
+    ],
+    "correct": "B",
+    "explanation": "OnFailure reinicia solo si falla.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 57,
+    "topic": "compute",
+    "text": "AKS. Service de tipo LoadBalancer. IP pública fija. ¿Qué anotación?",
+    "options": [
+      "A. service.beta.kubernetes.io/azure-load-balancer-ip",
+      "B. service.beta.kubernetes.io/azure-static-ip",
+      "C. service.beta.kubernetes.io/azure-reserved-ip",
+      "D. service.beta.kubernetes.io/azure-ip"
+    ],
+    "correct": "A",
+    "explanation": "La anotación especifica la IP estática.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 58,
+    "topic": "compute",
+    "text": "App Service. Múltiples regiones con Traffic Manager. ¿Modo de routing?",
+    "options": [
+      "A. Performance",
+      "B. Weighted",
+      "C. Priority",
+      "D. Geographic"
+    ],
+    "correct": "A",
+    "explanation": "Performance dirige al usuario a la región más cercana.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 59,
+    "topic": "compute",
+    "text": "VM. Habilitar diagnóstico de arranque. ¿Para qué sirve?",
+    "options": [
+      "A. Ver logs de consola",
+      "B. Ver métricas de CPU",
+      "C. Ver red",
+      "D. Ver discos"
+    ],
+    "correct": "A",
+    "explanation": "Boot diagnostics muestra logs de consola y capturas de pantalla.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 60,
+    "topic": "compute",
+    "text": "AKS. Azure AD integration. ¿Qué comando?",
+    "options": [
+      "A. az aks update --enable-aad",
+      "B. az aks create --enable-aad",
+      "C. az aks enable-aad",
+      "D. az aks aad integrate"
+    ],
+    "correct": "B",
+    "explanation": "--enable-aad durante la creación integra Azure AD.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 61,
+    "topic": "storage",
+    "text": "Configuras ciclo de vida en Blob storage para mover a archive tras 30 días. ¿SLA mínimo para recuperación?",
+    "options": [
+      "A. al menos 2 días",
+      "B. entre 1 y 15 horas",
+      "C. al menos 1 día",
+      "D. entre 0 y 60 minutos"
+    ],
+    "correct": "B",
+    "explanation": "La recuperación del nivel archive puede tomar horas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 62,
+    "topic": "storage",
+    "text": "Necesitas leer logs de transacciones de blobs para auditoría. ¿Qué hacer?",
+    "options": [
+      "A. Event Grid con Function",
+      "B. Habilitar change feed",
+      "C. Storage Analytics logs",
+      "D. Azure Monitor API"
+    ],
+    "correct": "B",
+    "explanation": "Change feed está diseñado específicamente para auditoría.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 63,
+    "topic": "storage",
+    "text": "Actualizar metadatos de blobs. ¿3 métodos en secuencia?",
+    "options": [
+      "A. FetchAttributes→Metadata.Add→SetMetadataAsync",
+      "B. SetMetadata→Fetch→Add",
+      "C. Add→SetProperties→Fetch",
+      "D. Fetch→SetMetadata→Add"
+    ],
+    "correct": "A",
+    "explanation": "Primero fetch, luego modificar metadatos, luego set.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 64,
+    "topic": "storage",
+    "text": "Cuenta GPv1 Premium con datos antiguos. Optimizar costos. ¿3 acciones?",
+    "options": [
+      "A. Upgrade a GPv2→Copiar→Cambiar tier",
+      "B. Cambiar tier→Upgrade→Copiar",
+      "C. Copiar→Upgrade→Cambiar tier",
+      "D. Upgrade→Cambiar tier→Copiar"
+    ],
+    "correct": "A",
+    "explanation": "Upgrade a GPv2, copiar datos, luego cambiar tier.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 65,
+    "topic": "storage",
+    "text": "Copiar grandes volúmenes entre cuentas de storage. Automatizado, recuperable. ¿Qué usar?",
+    "options": [
+      "A. AzCopy",
+      "B. Storage Explorer",
+      "C. Azure portal",
+      "D. .NET Client Library"
+    ],
+    "correct": "A",
+    "explanation": "AzCopy está optimizado para copias masivas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 66,
+    "topic": "storage",
+    "text": "Acceder a Storage desde VM con managed identity. ¿URL del endpoint?",
+    "options": [
+      "A. http://localhost:50342/oauth2/token",
+      "B. http://169.254.169.254:50342/oauth2/token",
+      "C. http://localhost/metadata/identity/oauth2/token",
+      "D. http://169.254.169.254/metadata/identity/oauth2/token"
+    ],
+    "correct": "D",
+    "explanation": "El endpoint IMDS es 169.254.169.254.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 67,
+    "topic": "storage",
+    "text": "Política de ciclo de vida: mover versiones a cool tras 60 días, eliminar tras 365. ¿Afirmaciones correctas?",
+    "options": [
+      "A. Mueve versiones en 'transactions' a cool",
+      "B. Mueve blobs no modificados 60 días a cool",
+      "C. Auto-tiering cool→hot posible"
+    ],
+    "correct": "A,C",
+    "explanation": "Usa daysAfterCreationGreaterThan, no daysAfterModification. Auto-tiering sí es posible.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 68,
+    "topic": "storage",
+    "text": "Blob storage. Buscar blobs por index tag. ¿Qué parámetro?",
+    "options": [
+      "A. comp=index&where=",
+      "B. comp=query&tag=",
+      "C. comp=search&filter=",
+      "D. comp=list&tag="
+    ],
+    "correct": "A",
+    "explanation": "comp=index&where= es la sintaxis correcta.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 69,
+    "topic": "storage",
+    "text": "Dos scripts Python en ACI. Acceso SMB a datos externos. ¿Qué volumen?",
+    "options": [
+      "A. Azure File Share",
+      "B. EmptyDir",
+      "C. Secret",
+      "D. gitRepo"
+    ],
+    "correct": "A",
+    "explanation": "Azure File Share soporta protocolo SMB.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 70,
+    "topic": "storage",
+    "text": "Sitio web estático en Blob Storage. Dominio personalizado + SSL. ¿Qué servicio?",
+    "options": [
+      "A. Azure CDN",
+      "B. CORS",
+      "C. Blob index tags",
+      "D. SSE"
+    ],
+    "correct": "A",
+    "explanation": "Azure CDN proporciona dominio personalizado y SSL.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 71,
+    "topic": "storage",
+    "text": "Storage account. Mover a otra región. ¿Primera acción?",
+    "options": [
+      "A. Exportar plantilla",
+      "B. Copiar datos con AzCopy",
+      "C. Crear nueva cuenta",
+      "D. Eliminar cuenta original"
+    ],
+    "correct": "A",
+    "explanation": "Exportar plantilla para crear la nueva cuenta.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 72,
+    "topic": "storage",
+    "text": "Blob storage. Purgar caché CDN por URL específica. ¿Tipo?",
+    "options": [
+      "A. Single path",
+      "B. Wildcard",
+      "C. Root domain",
+      "D. All"
+    ],
+    "correct": "A",
+    "explanation": "Single path purga un asset específico.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 73,
+    "topic": "storage",
+    "text": "Storage account. SAS delegación usuario. ¿Qué permiso se revoca?",
+    "options": [
+      "A. Regenerar clave cuenta",
+      "B. Revocar delegation key",
+      "C. Eliminar access policy",
+      "D. Cambiar RBAC"
+    ],
+    "correct": "B",
+    "explanation": "Revocar delegation key invalida todas las SAS de usuario.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 74,
+    "topic": "storage",
+    "text": "Blob storage. Leer change feed. ¿Cliente SDK?",
+    "options": [
+      "A. BlobServiceClient.GetChangeFeedClient",
+      "B. ChangeFeedClient",
+      "C. BlobChangeFeedClient",
+      "D. StorageChangeFeedClient"
+    ],
+    "correct": "A",
+    "explanation": "GetChangeFeedClient() obtiene el cliente de change feed.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 75,
+    "topic": "storage",
+    "text": "Storage account. Punto de restauración en el tiempo. ¿Requisitos?",
+    "options": [
+      "A. Soft delete",
+      "B. Change feed",
+      "C. Versioning",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "PITR requiere soft delete, change feed y versioning.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 76,
+    "topic": "storage",
+    "text": "Blob storage. Inmutabilidad legal hold. ¿Qué operaciones previene?",
+    "options": [
+      "A. Eliminar blob",
+      "B. Sobrescribir blob",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Legal hold previene eliminación y sobrescritura.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 77,
+    "topic": "storage",
+    "text": "Storage account. Cambiar replication de LRS a GRS. ¿Hay downtime?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "El cambio es en línea y no causa downtime.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 78,
+    "topic": "storage",
+    "text": "Blob storage. SAS a nivel de cuenta vs servicio. ¿Cuál permite cola?",
+    "options": [
+      "A. Account SAS",
+      "B. Service SAS",
+      "C. User delegation SAS",
+      "D. Ambas"
+    ],
+    "correct": "B",
+    "explanation": "Service SAS se puede limitar a un servicio específico (Queue).",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 79,
+    "topic": "storage",
+    "text": "Storage account. Firewall rules. ¿Qué direcciones IP permitir?",
+    "options": [
+      "A. 0.0.0.0/0",
+      "B. Azure services",
+      "C. 169.254.169.254",
+      "D. 168.63.129.16"
+    ],
+    "correct": "D",
+    "explanation": "168.63.129.16 es la IP de Azure Load Balancer.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 80,
+    "topic": "storage",
+    "text": "Blob storage. Soft delete. ¿Días máximos de retención?",
+    "options": [
+      "A. 30",
+      "B. 90",
+      "C. 180",
+      "D. 365"
+    ],
+    "correct": "D",
+    "explanation": "Soft delete permite hasta 365 días.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 81,
+    "topic": "storage",
+    "text": "Azure Files. SMB multichannel. ¿Qué beneficio?",
+    "options": [
+      "A. Mayor throughput",
+      "B. Mayor IOPS",
+      "C. Menor latencia",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "SMB multichannel mejora todas las métricas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 82,
+    "topic": "storage",
+    "text": "Storage account. Object replication. ¿Para qué sirve?",
+    "options": [
+      "A. Copiar blobs a otra cuenta",
+      "B. Backup automático",
+      "C. Disaster recovery",
+      "D. Todas"
+    ],
+    "correct": "A",
+    "explanation": "Object replication copia blobs a otra cuenta.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 83,
+    "topic": "storage",
+    "text": "Blob storage. NFS 3.0. ¿Qué sistema operativo soporta?",
+    "options": [
+      "A. Windows",
+      "B. Linux",
+      "C. macOS",
+      "D. Todos"
+    ],
+    "correct": "B",
+    "explanation": "NFS 3.0 solo está disponible para clientes Linux.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 84,
+    "topic": "storage",
+    "text": "Storage account. Generar SAS con PowerShell. ¿Cmdlet?",
+    "options": [
+      "A. New-AzStorageAccountSASToken",
+      "B. New-AzStorageContainerSASToken",
+      "C. New-AzStorageBlobSASToken",
+      "D. New-AzStorageQueueSASToken"
+    ],
+    "correct": "B",
+    "explanation": "New-AzStorageContainerSASToken para SAS a nivel contenedor.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 85,
+    "topic": "storage",
+    "text": "Azure Files. Backup. ¿Qué servicio?",
+    "options": [
+      "A. Azure Backup",
+      "B. Azure Site Recovery",
+      "C. Snapshots",
+      "D. AzCopy"
+    ],
+    "correct": "A",
+    "explanation": "Azure Backup soporta Azure Files.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 86,
+    "topic": "storage",
+    "text": "Blob storage. Tier archive. Rehidratar. ¿Prioridades?",
+    "options": [
+      "A. Standard",
+      "B. High",
+      "C. Low",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "High (1 hora) y Standard (15 horas).",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 87,
+    "topic": "storage",
+    "text": "Storage account. CORS. ¿Qué métodos soporta?",
+    "options": [
+      "A. GET, HEAD",
+      "B. PUT, POST",
+      "C. DELETE",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "CORS soporta todos los métodos HTTP.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 88,
+    "topic": "storage",
+    "text": "Blob storage. Static website. ¿Página de error 404?",
+    "options": [
+      "A. 404.html",
+      "B. error.html",
+      "C. default.html",
+      "D. custom.html"
+    ],
+    "correct": "A",
+    "explanation": "Se configura 404.html como página de error.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 89,
+    "topic": "storage",
+    "text": "Storage account. Rotar claves de acceso. ¿Comando CLI?",
+    "options": [
+      "A. az storage account keys renew",
+      "B. az storage account keys rotate",
+      "C. az storage account keys regenerate",
+      "D. az storage account keys update"
+    ],
+    "correct": "C",
+    "explanation": "az storage account keys regenerate renueva las claves.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 90,
+    "topic": "storage",
+    "text": "Azure Files. Sincronizar con on-premises. ¿Qué servicio?",
+    "options": [
+      "A. Azure File Sync",
+      "B. AzCopy",
+      "C. Storage Explorer",
+      "D. Robocopy"
+    ],
+    "correct": "A",
+    "explanation": "Azure File Sync sincroniza con servidores locales.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 91,
+    "topic": "cosmos",
+    "text": "Sistema de reservas de aerolínea. Requiere 99.99% disponibilidad, secuencia exacta, tolerancia 5 segundos. ¿Consistency level?",
+    "options": [
+      "A. Strong",
+      "B. Bounded Staleness",
+      "C. Session",
+      "D. Eventual"
+    ],
+    "correct": "B",
+    "explanation": "Bounded Staleness permite ventana de 5 segundos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 92,
+    "topic": "cosmos",
+    "text": "Mismo escenario. ¿Qué otra configuración necesitas?",
+    "options": [
+      "A. Automatic failover",
+      "B. Multi-region writes",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Multi-region writes y automatic failover.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 93,
+    "topic": "cosmos",
+    "text": "Datos no tienen valores distintos para partición. ¿Qué partition key usar?",
+    "options": [
+      "A. Propiedad única poco frecuente",
+      "B. Nombre de colección",
+      "C. Propiedad única frecuente",
+      "D. Concatenación con sufijo aleatorio",
+      "E. Hash suffix"
+    ],
+    "correct": "D,E",
+    "explanation": "Claves sintéticas (concatenación o hash).",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 94,
+    "topic": "cosmos",
+    "text": "Evaluar código Cosmos DB: CreateDatabaseIfNotExistsAsync. ¿Crea DB solo si no existe?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Sí, verifica existencia antes de crear.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 95,
+    "topic": "cosmos",
+    "text": "Evaluar código: CreateItemAsync. ¿Crea ítem?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Sí, crea el ítem en el contenedor.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 96,
+    "topic": "cosmos",
+    "text": "Evaluar código: CreateUserAsync. ¿Crea usuario?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Sí, crea usuario en Cosmos DB.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 97,
+    "topic": "cosmos",
+    "text": "Implementar change feed processor. ¿Componentes necesarios?",
+    "options": [
+      "A. Monitored container",
+      "B. Lease container",
+      "C. Host",
+      "D. Delegate",
+      "E. Todas"
+    ],
+    "correct": "E",
+    "explanation": "Los cuatro componentes son necesarios.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 98,
+    "topic": "cosmos",
+    "text": "Datos de conductores: nombre, apellido, paquetes, itemId, coordenadas. ¿Qué API y partition key?",
+    "options": [
+      "A. MongoDB / nombre",
+      "B. Table API / apellido",
+      "C. Core SQL / itemId",
+      "D. Gremlin / paquetes"
+    ],
+    "correct": "C",
+    "explanation": "Core SQL para documentos, itemId como partition key única.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 99,
+    "topic": "cosmos",
+    "text": "Change feed processor falla al leer un documento. Evitar reintentar todo el lote. ¿Qué usar?",
+    "options": [
+      "A. Change feed estimator",
+      "B. Dead-letter queue",
+      "C. Lifecycle notifications",
+      "D. Optimistic concurrency"
+    ],
+    "correct": "A,B",
+    "explanation": "Estimador para monitorear, dead-letter para evitar reintentos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 100,
+    "topic": "cosmos",
+    "text": "Base de datos relacional migrando a Cosmos DB. ¿Qué API?",
+    "options": [
+      "A. MongoDB API",
+      "B. Table API",
+      "C. SQL API",
+      "D. Cassandra API"
+    ],
+    "correct": "C",
+    "explanation": "SQL API es la más completa para consultas relacionales.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 101,
+    "topic": "cosmos",
+    "text": "Múltiples escrituras en regiones. ¿Qué configurar en ConnectionPolicy?",
+    "options": [
+      "A. UseMultipleWriteLocations = true",
+      "B. PreferredLocations",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "UseMultipleWriteLocations true y establecer ApplicationRegion.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 102,
+    "topic": "cosmos",
+    "text": "Consistency level por defecto. Cambiar a Consistent Prefix para una operación. ¿Cómo?",
+    "options": [
+      "A. En el SDK al hacer la consulta",
+      "B. En el portal",
+      "C. En ARM template",
+      "D. En PowerShell"
+    ],
+    "correct": "A",
+    "explanation": "Se puede especificar en el RequestOptions del SDK.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 103,
+    "topic": "cosmos",
+    "text": "Container con autoscaleMaxThroughput = 5000. ¿RUs mínimos?",
+    "options": [
+      "A. 500",
+      "B. 1000",
+      "C. 5000",
+      "D. 100"
+    ],
+    "correct": "A",
+    "explanation": "El mínimo es 10% de max, o sea 500 RUs.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 104,
+    "topic": "cosmos",
+    "text": "Query: SELECT * FROM c WHERE c.EmployeeId > '12345'. ¿Es in-partition query?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Range filter no es in-partition; necesita equality filter.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 105,
+    "topic": "cosmos",
+    "text": "Query: SELECT * FROM c WHERE c.EmployeeId = '12345'. ¿Es in-partition query?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Equality filter en partition key es in-partition query.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 106,
+    "topic": "cosmos",
+    "text": "Indexing mode para actualización síncrona. ¿Cuál?",
+    "options": [
+      "A. Lazy",
+      "B. Consistent",
+      "C. None",
+      "D. Async"
+    ],
+    "correct": "B",
+    "explanation": "Consistent actualiza el índice síncronamente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 107,
+    "topic": "cosmos",
+    "text": "MongoDB a Cosmos DB MongoDB API. ¿Herramienta de migración?",
+    "options": [
+      "A. Data Management Gateway",
+      "B. mongorestore",
+      "C. Azure Storage Explorer",
+      "D. AzCopy"
+    ],
+    "correct": "B",
+    "explanation": "mongorestore es la herramienta estándar de MongoDB.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 108,
+    "topic": "cosmos",
+    "text": "Trigger de Cosmos DB en Functions. ¿Qué procesa?",
+    "options": [
+      "A. Change feed",
+      "B. Stored procedures",
+      "C. Triggers SQL",
+      "D. UDFs"
+    ],
+    "correct": "A",
+    "explanation": "El trigger procesa el change feed.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 109,
+    "topic": "cosmos",
+    "text": "Query con ORDER BY. ¿Qué necesita?",
+    "options": [
+      "A. Composite index",
+      "B. Single index",
+      "C. No index",
+      "D. Spatial index"
+    ],
+    "correct": "A",
+    "explanation": "ORDER BY en múltiples campos necesita composite index.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 110,
+    "topic": "cosmos",
+    "text": "Time to Live (TTL) en Cosmos DB. ¿Valor para deshabilitar?",
+    "options": [
+      "A. -1",
+      "B. 0",
+      "C. null",
+      "D. off"
+    ],
+    "correct": "A",
+    "explanation": "TTL = -1 deshabilita la eliminación automática.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 111,
+    "topic": "cosmos",
+    "text": "Request Unit (RU) alta. ¿Qué optimizar?",
+    "options": [
+      "A. Partition key adecuada",
+      "B. Indexing policy",
+      "C. Query eficiente",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "Todas las opciones pueden reducir RUs.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 112,
+    "topic": "cosmos",
+    "text": "Conflict resolution con multi-region writes. ¿Políticas?",
+    "options": [
+      "A. Last Writer Wins",
+      "B. Custom procedure",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "LastWriterWins o procedimiento personalizado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 113,
+    "topic": "cosmos",
+    "text": "Etiquetas en documentos Cosmos DB. ¿Límite?",
+    "options": [
+      "A. 10",
+      "B. 20",
+      "C. 50",
+      "D. 100"
+    ],
+    "correct": "A",
+    "explanation": "Máximo 10 etiquetas por documento.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 114,
+    "topic": "cosmos",
+    "text": "Geospatial queries. ¿Qué índices necesita?",
+    "options": [
+      "A. Range",
+      "B. Spatial",
+      "C. Hash",
+      "D. Composite"
+    ],
+    "correct": "B",
+    "explanation": "Spatial index para consultas geoespaciales.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 115,
+    "topic": "cosmos",
+    "text": "Change feed estimator. ¿Qué monitorea?",
+    "options": [
+      "A. Progreso del procesador",
+      "B. RUs consumidas",
+      "C. Latencia",
+      "D. Throughput"
+    ],
+    "correct": "A",
+    "explanation": "Monitorea cuánto del change feed se ha procesado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 116,
+    "topic": "cosmos",
+    "text": "Bulk execution mode. ¿Beneficio?",
+    "options": [
+      "A. Mayor throughput",
+      "B. Menor RU por operación",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "A",
+    "explanation": "Bulk mode mejora el throughput.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 117,
+    "topic": "cosmos",
+    "text": "Dedicated gateway. ¿Para qué sirve?",
+    "options": [
+      "A. Cache integrada",
+      "B. Mejor rendimiento",
+      "C. Conexiones estables",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "Proporciona cache y mejor rendimiento.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 118,
+    "topic": "cosmos",
+    "text": "Cosmos DB + Azure Cognitive Search. ¿Patrón común?",
+    "options": [
+      "A. Push (change feed)",
+      "B. Pull (API)",
+      "C. Event Grid",
+      "D. Logic Apps"
+    ],
+    "correct": "A",
+    "explanation": "Change feed push a Cognitive Search.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 119,
+    "topic": "cosmos",
+    "text": "Materialized views. ¿Cómo implementar?",
+    "options": [
+      "A. Change feed",
+      "B. Stored procedures",
+      "C. Triggers",
+      "D. UDFs"
+    ],
+    "correct": "A",
+    "explanation": "Change feed para mantener vistas materializadas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 120,
+    "topic": "cosmos",
+    "text": "Serverless en Cosmos DB. ¿Cuándo usar?",
+    "options": [
+      "A. Tráfico impredecible",
+      "B. Alta carga constante",
+      "C. Batch processing",
+      "D. ETL"
+    ],
+    "correct": "A",
+    "explanation": "Serverless para tráfico impredecible o intermitente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 121,
+    "topic": "cosmos",
+    "text": "RBAC en Cosmos DB. ¿Rol para solo lectura?",
+    "options": [
+      "A. Cosmos DB Account Reader",
+      "B. Cosmos DB Operator",
+      "C. Cosmos DB Contributor",
+      "D. Cosmos DB Reader"
+    ],
+    "correct": "A",
+    "explanation": "Account Reader permite solo lectura de datos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 122,
+    "topic": "cosmos",
+    "text": "Cassandra API. ¿Consistency level predeterminado?",
+    "options": [
+      "A. ONE",
+      "B. QUORUM",
+      "C. ALL",
+      "D. LOCAL_QUORUM"
+    ],
+    "correct": "B",
+    "explanation": "QUORUM es el nivel predeterminado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 123,
+    "topic": "cosmos",
+    "text": "Gremlin API. Graph queries. ¿Qué tipo de índice?",
+    "options": [
+      "A. Hash",
+      "B. Range",
+      "C. Spatial",
+      "D. Composite"
+    ],
+    "correct": "B",
+    "explanation": "Range index para consultas de grafos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 124,
+    "topic": "cosmos",
+    "text": "Table API. ¿Qué SDK usar?",
+    "options": [
+      "A. Cosmos DB SDK",
+      "B. Azure Table Storage SDK",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Ambos SDKs funcionan con Table API.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 125,
+    "topic": "cosmos",
+    "text": "Analytical store. ¿Qué permite?",
+    "options": [
+      "A. Consultas analíticas",
+      "B. Synapse Link",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Analytical store es la base de Synapse Link.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 126,
+    "topic": "cosmos",
+    "text": "Point read vs query. ¿Cuál es más rápido?",
+    "options": [
+      "A. Point read",
+      "B. Query",
+      "C. Igual",
+      "D. Depende"
+    ],
+    "correct": "A",
+    "explanation": "Point read por ID/partition key es más rápido.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 127,
+    "topic": "cosmos",
+    "text": "Cosmos DB emulator. ¿Para qué sirve?",
+    "options": [
+      "A. Desarrollo local",
+      "B. Pruebas unitarias",
+      "C. CI/CD",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "Útil para desarrollo, pruebas y CI/CD.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 128,
+    "topic": "cosmos",
+    "text": "Continuous backup. ¿Retención máxima?",
+    "options": [
+      "A. 7 días",
+      "B. 30 días",
+      "C. 90 días",
+      "D. 365 días"
+    ],
+    "correct": "B",
+    "explanation": "Continuous backup permite hasta 30 días.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 129,
+    "topic": "cosmos",
+    "text": "Periodic backup. ¿Retención máxima?",
+    "options": [
+      "A. 7 días",
+      "B. 30 días",
+      "C. 90 días",
+      "D. 365 días"
+    ],
+    "correct": "C",
+    "explanation": "Periodic backup permite hasta 90 días.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 130,
+    "topic": "cosmos",
+    "text": "Cosmos DB + Azure Data Explorer. ¿Patrón?",
+    "options": [
+      "A. Change feed to ADX",
+      "B. Query federation",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Ambos patrones son compatibles.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 131,
+    "topic": "cosmos",
+    "text": "Cosmos DB + Azure Databricks. ¿Librería?",
+    "options": [
+      "A. Cosmos DB Spark Connector",
+      "B. Cosmos DB Python SDK",
+      "C. Cosmos DB .NET SDK",
+      "D. Cosmos DB Java SDK"
+    ],
+    "correct": "A",
+    "explanation": "Spark Connector optimizado para Databricks.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 132,
+    "topic": "cosmos",
+    "text": "Cosmos DB + Azure Functions. ¿Trigger type?",
+    "options": [
+      "A. CosmosDBTrigger",
+      "B. CosmosDBChangeFeed",
+      "C. CosmosDBListener",
+      "D. CosmosDBWatcher"
+    ],
+    "correct": "A",
+    "explanation": "CosmosDBTrigger es el nombre correcto.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 133,
+    "topic": "cosmos",
+    "text": "Cosmos DB + Logic Apps. ¿Acción?",
+    "options": [
+      "A. When an item is created",
+      "B. When an item is modified",
+      "C. When an item is deleted",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "Logic Apps puede reaccionar a todos los cambios.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 134,
+    "topic": "cosmos",
+    "text": "Cosmos DB + Event Grid. ¿Qué eventos publica?",
+    "options": [
+      "A. Item created",
+      "B. Item modified",
+      "C. Item deleted",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "Event Grid publica todos los eventos de cambio.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 135,
+    "topic": "cosmos",
+    "text": "Cosmos DB. Maximum item size. ¿Límite?",
+    "options": [
+      "A. 1 MB",
+      "B. 2 MB",
+      "C. 4 MB",
+      "D. 8 MB"
+    ],
+    "correct": "B",
+    "explanation": "El tamaño máximo de documento es 2 MB.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 136,
+    "topic": "serverless",
+    "text": "Function App procesa imágenes subidas a Blob. Minimizar latencia. ¿Plan y trigger?",
+    "options": [
+      "A. App Service / input binding",
+      "B. Consumption / Blob trigger",
+      "C. Consumption / Timer",
+      "D. Premium / HTTP"
+    ],
+    "correct": "B",
+    "explanation": "Blob trigger reacciona inmediatamente a nuevos blobs.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 137,
+    "topic": "serverless",
+    "text": "HTTP Function timeout a los 4 min. Solución: Durable Functions. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "La solución es pasar el payload a una cola.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 138,
+    "topic": "serverless",
+    "text": "Mismo escenario. Solución: Pasar payload a cola Service Bus. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Esta es la práctica recomendada.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 139,
+    "topic": "serverless",
+    "text": "Mismo escenario. Solución: App Service plan con Always On. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Always On no resuelve el timeout.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 140,
+    "topic": "serverless",
+    "text": "Fotos subidas a Blob GPv2. Procesar en <1 min. Solución: Function con trigger blob. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Event Grid + Functions es la solución recomendada.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 141,
+    "topic": "serverless",
+    "text": "Mismo escenario. Solución: Convertir a BlockBlobStorage. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "No es necesario convertir la cuenta.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 142,
+    "topic": "serverless",
+    "text": "Mismo escenario. Solución: Change feed. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Change feed no es para triggers en tiempo real.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 143,
+    "topic": "serverless",
+    "text": "Mismo escenario. Solución: Function Consumption con trigger blob. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Consumption escala dinámicamente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 144,
+    "topic": "serverless",
+    "text": "Actualizar definiciones de Logic App existente. ¿Qué usar?",
+    "options": [
+      "A. Enterprise Integration Pack",
+      "B. Logic App Code View",
+      "C. API Connections",
+      "D. Logic Apps Designer"
+    ],
+    "correct": "B",
+    "explanation": "Code View permite editar JSON directamente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 145,
+    "topic": "serverless",
+    "text": "Editar flujos de trabajo de Logic App. ¿Qué usar?",
+    "options": [
+      "A. Enterprise Integration Pack",
+      "B. Logic App Code View",
+      "C. API Connections",
+      "D. Logic Apps Designer"
+    ],
+    "correct": "D",
+    "explanation": "Designer es la interfaz visual.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 146,
+    "topic": "serverless",
+    "text": "Function App con código no soportado por el host. Soporta HTTP. ¿Qué configurar?",
+    "options": [
+      "A. Custom handler",
+      "B. PowerShell Core",
+      "C. Docker container",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "Custom handler + Docker container + runtime stack.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 147,
+    "topic": "serverless",
+    "text": "Durable Function. Invalid input no causa fallo. Debe estar disponible. ¿RuntimeStatus?",
+    "options": [
+      "A. Failed",
+      "B. Completed",
+      "C. Pending",
+      "D. Running"
+    ],
+    "correct": "A",
+    "explanation": "Failed indica que falló pero el input está disponible.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 148,
+    "topic": "serverless",
+    "text": "Durable Function para pedidos online. Llamar API externa para descuentos. ¿Qué tipos?",
+    "options": [
+      "A. Orchestrator",
+      "B. Entity",
+      "C. Client",
+      "D. Activity"
+    ],
+    "correct": "A,B",
+    "explanation": "Orchestrator y Entity.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 149,
+    "topic": "serverless",
+    "text": "Durable Function para préstamos. Acciones en orden. Crédito puede tomar días. ¿Qué tipo?",
+    "options": [
+      "A. Orchestrator",
+      "B. Client",
+      "C. Entity",
+      "D. Activity"
+    ],
+    "correct": "A",
+    "explanation": "Orchestrator maneja flujos de larga duración.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 150,
+    "topic": "serverless",
+    "text": "Function App. Funciones requieren: hasta 10 intentos, 20 seg entre intentos por 15 min. ¿host.json?",
+    "options": [
+      "A. maxRetryCount=10, retryStrategy=fixedDelay",
+      "B. maxRetryCount=10, retryStrategy=exponentialBackoff",
+      "C. maxRetryCount=5, retryStrategy=fixedDelay",
+      "D. maxRetryCount=5, retryStrategy=exponentialBackoff"
+    ],
+    "correct": "A",
+    "explanation": "Fixed delay con 10 intentos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 151,
+    "topic": "serverless",
+    "text": "Logic App. Cambiar definiciones regularmente. ¿Herramientas?",
+    "options": [
+      "A. Enterprise Integration Pack",
+      "B. Code View",
+      "C. Logic Apps Designer",
+      "D. Todas"
+    ],
+    "correct": "D",
+    "explanation": "Todas son útiles según el caso.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 152,
+    "topic": "serverless",
+    "text": "Function App con trigger queue. Timeout de conexión a SQL. ¿Qué hacer?",
+    "options": [
+      "A. Disminuir batchSize",
+      "B. Convertir a Event Hub",
+      "C. Cambiar a Premium plan",
+      "D. Cambiar a Consumption"
+    ],
+    "correct": "C",
+    "explanation": "Premium plan tiene límites de conexión más altos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 153,
+    "topic": "serverless",
+    "text": "Durable Function. Monitorear con app de consola. ¿Endpoint?",
+    "options": [
+      "A. /runtime/webhooks/durabletask/instances",
+      "B. /admin/instances",
+      "C. /api/instances",
+      "D. /durable/instances"
+    ],
+    "correct": "A",
+    "explanation": "El endpoint HTTP built-in de Durable Functions.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 154,
+    "topic": "serverless",
+    "text": "Function App. Event-driven scaling + custom Linux images. ¿Plan?",
+    "options": [
+      "A. Consumption",
+      "B. Premium",
+      "C. Dedicated",
+      "D. App Service"
+    ],
+    "correct": "B",
+    "explanation": "Premium soporta VNet e imágenes personalizadas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 155,
+    "topic": "serverless",
+    "text": "Function App con trigger Blob. Uso infrecuente. Minimizar costos. ¿Plan?",
+    "options": [
+      "A. Consumption",
+      "B. Premium",
+      "C. Dedicated",
+      "D. App Service"
+    ],
+    "correct": "A",
+    "explanation": "Consumption minimiza costos para uso infrecuente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 156,
+    "topic": "serverless",
+    "text": "Function App. Event-driven scaling + deployment slots. ¿Plan?",
+    "options": [
+      "A. Consumption",
+      "B. Premium",
+      "C. Dedicated",
+      "D. App Service"
+    ],
+    "correct": "B",
+    "explanation": "Premium y Dedicated soportan slots.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 157,
+    "topic": "serverless",
+    "text": "Durable Function. Procesar lista de inputs. Input inválido no causa fallo. ¿API?",
+    "options": [
+      "A. CallEntityAsync",
+      "B. CallActivityAsync",
+      "C. CallSubOrchestratorAsync",
+      "D. SignalEntityAsync"
+    ],
+    "correct": "A",
+    "explanation": "CallEntityAsync para manejo de estado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 158,
+    "topic": "serverless",
+    "text": "Logic App. Cambiar comportamiento API. Soporte input alternativo, remover texto. ¿Políticas?",
+    "options": [
+      "A. Inbound",
+      "B. Outbound",
+      "C. Backend",
+      "D. On-error"
+    ],
+    "correct": "A,B",
+    "explanation": "Inbound para inputs, outbound para respuestas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 159,
+    "topic": "serverless",
+    "text": "Logic App. On-premises connectivity. ¿Qué usar?",
+    "options": [
+      "A. On-premises Data Gateway",
+      "B. VNet",
+      "C. Hybrid Connections",
+      "D. ExpressRoute"
+    ],
+    "correct": "A",
+    "explanation": "Data Gateway es para Logic Apps.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 160,
+    "topic": "serverless",
+    "text": "Function App. Azure Files mounted folder. ¿Sistemas soportados?",
+    "options": [
+      "A. Windows",
+      "B. Linux",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Ambos sistemas operativos soportan Azure Files.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 161,
+    "topic": "messaging",
+    "text": "App Service escala por mensajes en Service Bus. ¿Métrica para escalar down?",
+    "options": [
+      "A. ActiveMessageCount <= umbral",
+      "B. QueueLength <= umbral",
+      "C. MessageCount <= umbral",
+      "D. TotalMessages <= umbral"
+    ],
+    "correct": "A",
+    "explanation": "ActiveMessageCount es la métrica correcta.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 162,
+    "topic": "messaging",
+    "text": "Alertas de temperatura por almacenes. Solución con Logic App. ¿Primera acción?",
+    "options": [
+      "A. Crear Logic App",
+      "B. Añadir trigger cola",
+      "C. Añadir condición",
+      "D. Añadir acción email"
+    ],
+    "correct": "A",
+    "explanation": "Primero crear el recurso Logic App.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 163,
+    "topic": "messaging",
+    "text": "Event Grid. Evento debe invalidarse tras período. ¿Qué autenticación?",
+    "options": [
+      "A. SAS tokens",
+      "B. Key authentication",
+      "C. Managed identity",
+      "D. Service principal"
+    ],
+    "correct": "A",
+    "explanation": "SAS tokens permiten expiración.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 164,
+    "topic": "messaging",
+    "text": "Event Grid. Validar suscripción programáticamente. ¿Qué handshake?",
+    "options": [
+      "A. ValidationCode",
+      "B. ValidationURL",
+      "C. WebHook",
+      "D. Callback"
+    ],
+    "correct": "A",
+    "explanation": "ValidationCode es programático.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 165,
+    "topic": "messaging",
+    "text": "Sistema de alarmas con Service Bus. Registrar tipo de alarma para auditoría. ¿Propiedades?",
+    "options": [
+      "A. ReplyToSessionId",
+      "B. CorrelationId",
+      "C. SessionId",
+      "D. MessageId"
+    ],
+    "correct": "A,B",
+    "explanation": "CorrelationId para correlación, ReplyToSessionId para respuestas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 166,
+    "topic": "messaging",
+    "text": "Solución pub-sub sin polling. ¿Qué servicios?",
+    "options": [
+      "A. Service Bus",
+      "B. Event Hub",
+      "C. Event Grid",
+      "D. Queue"
+    ],
+    "correct": "A,C",
+    "explanation": "Service Bus (tópicos) y Event Grid.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 167,
+    "topic": "messaging",
+    "text": "Suscripción Service Bus no consume mensajes. ¿Qué código falta?",
+    "options": [
+      "A. AddRuleAsync",
+      "B. RegisterMessageHandler",
+      "C. CloseAsync",
+      "D. OnMessageAsync"
+    ],
+    "correct": "B",
+    "explanation": "RegisterMessageHandler inicia la recepción.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 168,
+    "topic": "messaging",
+    "text": "Suscripciones Service Bus. Filtros para: FutureOrders, HighPriority, International, HighQuantity, AllOrders. ¿Filtros?",
+    "options": [
+      "A. SQLFilter, CorrelationFilter, SQLFilter, SQLFilter, TrueFilter",
+      "B. CorrelationFilter, SQLFilter, CorrelationFilter, SQLFilter, FalseFilter",
+      "C. SQLFilter, CorrelationFilter, SQLFilter, SQLFilter, FalseFilter",
+      "D. CorrelationFilter, SQLFilter, CorrelationFilter, SQLFilter, TrueFilter"
+    ],
+    "correct": "A",
+    "explanation": "FutureOrders: SQLFilter (FalseFilter), HighPriority: CorrelationFilter, International: SQLFilter, HighQuantity: SQLFilter, AllOrders: TrueFilter.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 169,
+    "topic": "messaging",
+    "text": "Event Hubs. Programa de lealtad. Minoristas solo registran sus ventas. ¿Qué usar?",
+    "options": [
+      "A. Publisher policies",
+      "B. Partition key",
+      "C. Consumer groups",
+      "D. Event handlers"
+    ],
+    "correct": "A",
+    "explanation": "Publisher policies permiten control granular.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 170,
+    "topic": "messaging",
+    "text": "Event Hubs Premium. Throttling por carretera. ¿Qué usar?",
+    "options": [
+      "A. Consumer groups",
+      "B. Partitions",
+      "C. Application groups",
+      "D. Namespaces"
+    ],
+    "correct": "C",
+    "explanation": "Application groups permiten throttling.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 171,
+    "topic": "messaging",
+    "text": "Service Bus. Duplicate detection. ¿Qué propiedad usa?",
+    "options": [
+      "A. MessageId",
+      "B. SessionId",
+      "C. CorrelationId",
+      "D. SequenceNumber"
+    ],
+    "correct": "A",
+    "explanation": "MessageId se usa para detección de duplicados.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 172,
+    "topic": "messaging",
+    "text": "Service Bus. FIFO ordering. ¿Qué propiedad?",
+    "options": [
+      "A. SessionId",
+      "B. MessageId",
+      "C. PartitionKey",
+      "D. SequenceNumber"
+    ],
+    "correct": "A",
+    "explanation": "SessionId garantiza orden FIFO.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 173,
+    "topic": "messaging",
+    "text": "Event Grid. Routing de eventos. ¿Qué servicio para dead-letter?",
+    "options": [
+      "A. Storage Queue",
+      "B. Service Bus Queue",
+      "C. Event Hub",
+      "D. Logic App"
+    ],
+    "correct": "A",
+    "explanation": "Storage Queue es común para dead-letter.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 174,
+    "topic": "messaging",
+    "text": "Service Bus. Maximum message size (Standard tier). ¿Límite?",
+    "options": [
+      "A. 256 KB",
+      "B. 1 MB",
+      "C. 256 MB",
+      "D. 1 GB"
+    ],
+    "correct": "A",
+    "explanation": "El tamaño máximo es 256 KB en Standard.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 175,
+    "topic": "messaging",
+    "text": "Service Bus. Premium tier. ¿Límite de mensaje?",
+    "options": [
+      "A. 256 KB",
+      "B. 1 MB",
+      "C. 100 MB",
+      "D. 1 GB"
+    ],
+    "correct": "C",
+    "explanation": "Premium permite hasta 100 MB.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 176,
+    "topic": "messaging",
+    "text": "Event Hubs. Capture. ¿Qué formato de archivo?",
+    "options": [
+      "A. AVRO",
+      "B. Parquet",
+      "C. CSV",
+      "D. JSON"
+    ],
+    "correct": "A",
+    "explanation": "AVRO es el formato predeterminado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 177,
+    "topic": "messaging",
+    "text": "Event Hubs. Throughput units. ¿Límite por TU?",
+    "options": [
+      "A. 1 MB/s entrada, 2 MB/s salida",
+      "B. 2 MB/s entrada, 2 MB/s salida",
+      "C. 1 MB/s entrada, 1 MB/s salida",
+      "D. 2 MB/s entrada, 4 MB/s salida"
+    ],
+    "correct": "A",
+    "explanation": "1 MB/s entrada, 2 MB/s salida por TU.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 178,
+    "topic": "messaging",
+    "text": "Event Hubs. Processing units (Premium). ¿Límite por PU?",
+    "options": [
+      "A. 5 MB/s entrada, 10 MB/s salida",
+      "B. 10 MB/s entrada, 20 MB/s salida",
+      "C. 1 MB/s entrada, 2 MB/s salida",
+      "D. 20 MB/s entrada, 40 MB/s salida"
+    ],
+    "correct": "B",
+    "explanation": "10 MB/s entrada, 20 MB/s salida por PU.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 179,
+    "topic": "messaging",
+    "text": "Service Bus. Auto-forwarding. ¿Límite de saltos?",
+    "options": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4"
+    ],
+    "correct": "D",
+    "explanation": "Máximo 4 saltos de auto-forwarding.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 180,
+    "topic": "messaging",
+    "text": "Service Bus. Message TTL. ¿Valor máximo?",
+    "options": [
+      "A. 7 días",
+      "B. 14 días",
+      "C. 30 días",
+      "D. 365 días"
+    ],
+    "correct": "D",
+    "explanation": "TTL máximo es 365 días.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 181,
+    "topic": "messaging",
+    "text": "Service Bus. Lock duration. ¿Valor máximo?",
+    "options": [
+      "A. 1 minuto",
+      "B. 5 minutos",
+      "C. 10 minutos",
+      "D. 30 minutos"
+    ],
+    "correct": "B",
+    "explanation": "Lock duration máximo es 5 minutos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 182,
+    "topic": "messaging",
+    "text": "Service Bus. Max delivery count. ¿Valor máximo?",
+    "options": [
+      "A. 10",
+      "B. 100",
+      "C. 1000",
+      "D. 5000"
+    ],
+    "correct": "C",
+    "explanation": "Máximo 1000 entregas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 183,
+    "topic": "messaging",
+    "text": "Event Grid. System topics. ¿Qué servicios publican?",
+    "options": [
+      "A. Blob Storage",
+      "B. Resource Groups",
+      "C. Event Hubs",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Muchos servicios de Azure publican eventos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 184,
+    "topic": "messaging",
+    "text": "Event Grid. Custom topics. ¿Autenticación recomendada?",
+    "options": [
+      "A. Key",
+      "B. SAS token",
+      "C. Managed identity",
+      "D. Service principal"
+    ],
+    "correct": "B",
+    "explanation": "SAS token es la más segura.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 185,
+    "topic": "messaging",
+    "text": "Event Grid. Retry policy. ¿Máximo de intentos?",
+    "options": [
+      "A. 10",
+      "B. 20",
+      "C. 30",
+      "D. 50"
+    ],
+    "correct": "C",
+    "explanation": "Máximo 30 intentos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 186,
+    "topic": "messaging",
+    "text": "Event Grid. Event retention. ¿Días?",
+    "options": [
+      "A. 1",
+      "B. 7",
+      "C. 24",
+      "D. 48"
+    ],
+    "correct": "C",
+    "explanation": "Retención de 24 horas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 187,
+    "topic": "messaging",
+    "text": "Notification Hubs. Tipos de notificaciones. ¿Cuáles soporta?",
+    "options": [
+      "A. Toast",
+      "B. Tile",
+      "C. Raw",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Soporta todos los tipos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 188,
+    "topic": "messaging",
+    "text": "Notification Hubs. Registros por instalación. ¿Límite por hub?",
+    "options": [
+      "A. 1M",
+      "B. 10M",
+      "C. 100M",
+      "D. 1B"
+    ],
+    "correct": "C",
+    "explanation": "Hasta 100 millones de registros.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 189,
+    "topic": "messaging",
+    "text": "Service Bus. SQL Filter. ¿Qué propiedades del sistema tienen prefijo?",
+    "options": [
+      "A. sys.",
+      "B. @",
+      "C. $",
+      "D. #"
+    ],
+    "correct": "A",
+    "explanation": "sys. es el prefijo para propiedades del sistema.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 190,
+    "topic": "messaging",
+    "text": "Service Bus. Correlation Filter. ¿Cómo combina condiciones?",
+    "options": [
+      "A. AND",
+      "B. OR",
+      "C. NOT",
+      "D. XOR"
+    ],
+    "correct": "A",
+    "explanation": "Combina condiciones con AND lógico.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 191,
+    "topic": "messaging",
+    "text": "Event Hubs. Partition key. ¿Qué garantiza?",
+    "options": [
+      "A. Orden por partición",
+      "B. Distribución uniforme",
+      "C. Alta disponibilidad",
+      "D. Baja latencia"
+    ],
+    "correct": "A",
+    "explanation": "La misma partition key va a la misma partición, garantizando orden.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 192,
+    "topic": "messaging",
+    "text": "Event Hubs. Consumer group. ¿Límite por hub?",
+    "options": [
+      "A. 10",
+      "B. 20",
+      "C. 32",
+      "D. 50"
+    ],
+    "correct": "C",
+    "explanation": "Máximo 32 consumer groups por hub.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 193,
+    "topic": "messaging",
+    "text": "Event Hubs. Kafka endpoint. ¿Qué versión soporta?",
+    "options": [
+      "A. 1.0",
+      "B. 1.1",
+      "C. 2.0",
+      "D. 2.1"
+    ],
+    "correct": "C",
+    "explanation": "Soporta Kafka 2.0.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 194,
+    "topic": "messaging",
+    "text": "Service Bus. AMQP vs HTTPS. ¿Cuál es más eficiente?",
+    "options": [
+      "A. AMQP",
+      "B. HTTPS",
+      "C. Igual",
+      "D. Depende"
+    ],
+    "correct": "A",
+    "explanation": "AMQP es más eficiente por ser persistente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 195,
+    "topic": "messaging",
+    "text": "Service Bus. Batch operations. ¿Beneficio?",
+    "options": [
+      "A. Mayor throughput",
+      "B. Menor costo",
+      "C. Menor latencia",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Batch mejora todas las métricas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 196,
+    "topic": "messaging",
+    "text": "Event Hubs. Schema Registry. ¿Para qué sirve?",
+    "options": [
+      "A. Validar esquemas",
+      "B. Serializar datos",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Registra y valida esquemas para serialización.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 197,
+    "topic": "messaging",
+    "text": "Event Hubs. Geo-disaster recovery. ¿Qué replica?",
+    "options": [
+      "A. Metadata",
+      "B. Data",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "A",
+    "explanation": "Solo replica metadatos, no datos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 198,
+    "topic": "messaging",
+    "text": "Service Bus. Geo-disaster recovery. ¿Qué replica?",
+    "options": [
+      "A. Metadata",
+      "B. Data",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "A",
+    "explanation": "Solo replica metadatos, no mensajes.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 199,
+    "topic": "messaging",
+    "text": "Service Bus. Paired namespaces. ¿Para qué?",
+    "options": [
+      "A. Alta disponibilidad",
+      "B. Disaster recovery",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Para alta disponibilidad y DR.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 200,
+    "topic": "messaging",
+    "text": "Event Hubs. Azure Functions binding. ¿Tipo?",
+    "options": [
+      "A. EventHubTrigger",
+      "B. EventHubOutput",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Soporta trigger y output binding.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 201,
+    "topic": "messaging",
+    "text": "Service Bus. Azure Functions binding. ¿Tipo?",
+    "options": [
+      "A. ServiceBusTrigger",
+      "B. ServiceBusOutput",
+      "C. Ambas",
+      "D. Ninguna"
+    ],
+    "correct": "C",
+    "explanation": "Soporta trigger y output binding.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 202,
+    "topic": "messaging",
+    "text": "Event Grid. Event filtering. ¿Qué operadores?",
+    "options": [
+      "A. beginsWith",
+      "B. endsWith",
+      "C. equals",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Soporta beginsWith, endsWith, equals.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 203,
+    "topic": "messaging",
+    "text": "Event Grid. Advanced filtering. ¿Qué operadores?",
+    "options": [
+      "A. NumberIn",
+      "B. StringContains",
+      "C. BoolEquals",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Soporta múltiples operadores avanzados.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 204,
+    "topic": "messaging",
+    "text": "Service Bus. Sessions. ¿Qué identifica una sesión?",
+    "options": [
+      "A. SessionId",
+      "B. MessageId",
+      "C. CorrelationId",
+      "D. PartitionKey"
+    ],
+    "correct": "A",
+    "explanation": "SessionId identifica la sesión.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 205,
+    "topic": "messaging",
+    "text": "Service Bus. Deferral. ¿Para qué sirve?",
+    "options": [
+      "A. Procesar después",
+      "B. Rechazar mensaje",
+      "C. Mover a DLQ",
+      "D. Renovar lock"
+    ],
+    "correct": "A",
+    "explanation": "Deferral retrasa el procesamiento.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 206,
+    "topic": "apim",
+    "text": "API pública con backend en App Service. Autenticación backend. Solución: Basic credentials. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "Se usan certificados de cliente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 207,
+    "topic": "apim",
+    "text": "Mismo escenario. Solución: Client cert para HTTP endpoint. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "B",
+    "explanation": "El backend es un recurso de Azure, no un endpoint HTTP.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 208,
+    "topic": "apim",
+    "text": "Mismo escenario. Solución: Client cert para Azure resource. ¿Cumple?",
+    "options": [
+      "A. Sí",
+      "B. No"
+    ],
+    "correct": "A",
+    "explanation": "Para recursos de Azure se usan certificados.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 209,
+    "topic": "apim",
+    "text": "API de Azure. Autenticación sin credenciales. ¿Qué mecanismo?",
+    "options": [
+      "A. Basic",
+      "B. Anonymous",
+      "C. Managed identity",
+      "D. Client certificate"
+    ],
+    "correct": "C",
+    "explanation": "Managed identity no requiere credenciales en código.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 210,
+    "topic": "apim",
+    "text": "SaaS con API Management. Servicios llamables sin auth. ¿Qué política implementar?",
+    "options": [
+      "A. jsonp",
+      "B. authentication-certificate",
+      "C. check-header",
+      "D. validate-jwt"
+    ],
+    "correct": "D",
+    "explanation": "validate-jwt valida tokens de OAuth.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 211,
+    "topic": "apim",
+    "text": "API Management. Caching por usuario. Políticas: set-variable, cache-lookup, cache-store, find-and-replace. ¿Secciones?",
+    "options": [
+      "A. Inbound, Inbound, Outbound, Outbound",
+      "B. Inbound, Outbound, Inbound, Outbound",
+      "C. Outbound, Inbound, Outbound, Inbound",
+      "D. Inbound, Inbound, Inbound, Outbound"
+    ],
+    "correct": "A",
+    "explanation": "Lookup y variable en inbound, store y replace en outbound.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 212,
+    "topic": "apim",
+    "text": "APIM Standard. Backend con límite de solicitudes. Limitar por IP. ¿Política?",
+    "options": [
+      "A. ip-filter",
+      "B. quota-by-key",
+      "C. rate-limit-by-key",
+      "D. rate-limit"
+    ],
+    "correct": "C",
+    "explanation": "rate-limit-by-key permite limitar por IP.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 213,
+    "topic": "apim",
+    "text": "APIs en APIM. Ocultar tecnología backend. ¿Qué política?",
+    "options": [
+      "A. Inbound scoped a producto",
+      "B. Outbound scoped a operación",
+      "C. Outbound scoped a global",
+      "D. Backend scoped a global"
+    ],
+    "correct": "C",
+    "explanation": "Outbound global transforma todas las respuestas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 214,
+    "topic": "apim",
+    "text": "APIM. Transformar APIs. Soporte input alternativo, remover formato. ¿Políticas?",
+    "options": [
+      "A. Inbound, Outbound",
+      "B. Outbound, Inbound",
+      "C. Backend, Inbound",
+      "D. On-error, Outbound"
+    ],
+    "correct": "A",
+    "explanation": "Inbound para inputs, outbound para respuestas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 215,
+    "topic": "apim",
+    "text": "APIM. Productos. ¿Qué requisitos cumplen?",
+    "options": [
+      "A. Subscription key",
+      "B. Terms of use",
+      "C. Approval required",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Los productos soportan todas esas características.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 216,
+    "topic": "apim",
+    "text": "APIM. Developer portal. ¿Qué se puede personalizar?",
+    "options": [
+      "A. Tema",
+      "B. Contenido",
+      "C. CSS",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "El portal es totalmente personalizable.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 217,
+    "topic": "apim",
+    "text": "APIM. Policies. ¿Orden de ejecución?",
+    "options": [
+      "A. Global, Product, API, Operation",
+      "B. Operation, API, Product, Global",
+      "C. Product, API, Operation, Global",
+      "D. API, Product, Global, Operation"
+    ],
+    "correct": "A",
+    "explanation": "Global → Product → API → Operation.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 218,
+    "topic": "apim",
+    "text": "APIM. Base policy. ¿Qué hace?",
+    "options": [
+      "A. Ejecuta políticas heredadas",
+      "B. Resetea políticas",
+      "C. Define políticas",
+      "D. Valida políticas"
+    ],
+    "correct": "A",
+    "explanation": "Reenvía la ejecución a políticas de ámbito superior.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 219,
+    "topic": "apim",
+    "text": "APIM. Set-backend-service policy. ¿Qué hace?",
+    "options": [
+      "A. Cambia el backend",
+      "B. Define timeout",
+      "C. Configura retries",
+      "D. Valida certificados"
+    ],
+    "correct": "A",
+    "explanation": "Cambia la URL del backend dinámicamente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 220,
+    "topic": "apim",
+    "text": "APIM. Return-response policy. ¿Cuándo se usa?",
+    "options": [
+      "A. Interrumpir ejecución",
+      "B. Cachear respuesta",
+      "C. Loggear respuesta",
+      "D. Validar respuesta"
+    ],
+    "correct": "A",
+    "explanation": "Interrumpe la pipeline y devuelve respuesta.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 221,
+    "topic": "apim",
+    "text": "APIM. On-error section. ¿Qué contiene?",
+    "options": [
+      "A. Políticas para errores",
+      "B. Políticas para éxito",
+      "C. Políticas para cache",
+      "D. Políticas para logging"
+    ],
+    "correct": "A",
+    "explanation": "Contiene políticas que se ejecutan en caso de error.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 222,
+    "topic": "apim",
+    "text": "APIM. Validate-jwt policy. ¿Qué valida?",
+    "options": [
+      "A. Firma",
+      "B. Audiencia",
+      "C. Emisor",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Valida firma, audiencia, emisor y más.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 223,
+    "topic": "apim",
+    "text": "APIM. OpenAPI specification. ¿Para qué sirve?",
+    "options": [
+      "A. Definir API",
+      "B. Generar documentación",
+      "C. Generar SDK",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Define, documenta y genera SDKs.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 224,
+    "topic": "apim",
+    "text": "APIM. Versions. ¿Qué estrategias soporta?",
+    "options": [
+      "A. Path",
+      "B. Header",
+      "C. Query string",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Soporta path, header y query string.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 225,
+    "topic": "apim",
+    "text": "APIM. Revisions. ¿Para qué sirven?",
+    "options": [
+      "A. Cambios no breaking",
+      "B. Cambios breaking",
+      "C. Rollback",
+      "D. A y C"
+    ],
+    "correct": "D",
+    "explanation": "Para cambios no breaking y rollback.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 226,
+    "topic": "apim",
+    "text": "APIM. Analytics. ¿Qué métricas muestra?",
+    "options": [
+      "A. Llamadas por API",
+      "B. Tiempo de respuesta",
+      "C. Errores",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Muestra todas esas métricas y más.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 227,
+    "topic": "apim",
+    "text": "APIM. Self-hosted gateway. ¿Cuándo usarlo?",
+    "options": [
+      "A. On-premises",
+      "B. Otras nubes",
+      "C. Latencia ultrabaja",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Útil para entornos híbridos o multi-cloud.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 228,
+    "topic": "apim",
+    "text": "APIM. Managed gateway. ¿Dónde se ejecuta?",
+    "options": [
+      "A. En Azure",
+      "B. En la nube del cliente",
+      "C. On-premises",
+      "D. En cualquier lugar"
+    ],
+    "correct": "A",
+    "explanation": "Se ejecuta en la infraestructura de Azure.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 229,
+    "topic": "apim",
+    "text": "APIM. Consumption tier. ¿Características?",
+    "options": [
+      "A. Serverless",
+      "B. Autoscaling",
+      "C. Bajo costo",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Serverless, autoscaling y pago por ejecución.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 230,
+    "topic": "apim",
+    "text": "APIM. Developer tier. ¿Para qué sirve?",
+    "options": [
+      "A. Desarrollo",
+      "B. Pruebas",
+      "C. Producción baja",
+      "D. A y B"
+    ],
+    "correct": "D",
+    "explanation": "Para desarrollo y pruebas no productivas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 231,
+    "topic": "apim",
+    "text": "APIM. Premium tier. ¿Qué permite?",
+    "options": [
+      "A. VNet",
+      "B. Multi-región",
+      "C. Self-hosted gateway",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Permite VNet, multi-región y self-hosted gateway.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 232,
+    "topic": "apim",
+    "text": "APIM. Caching policies. ¿Tipos de cache?",
+    "options": [
+      "A. Internal",
+      "B. External (Redis)",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Soporta cache interna y externa con Redis.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 233,
+    "topic": "apim",
+    "text": "APIM. Cache lookup policy. ¿Atributo vary-by-query-parameter?",
+    "options": [
+      "A. Varía por query param",
+      "B. Varía por header",
+      "C. Varía por IP",
+      "D. Varía por usuario"
+    ],
+    "correct": "A",
+    "explanation": "Diferencia cache por query parameter.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 234,
+    "topic": "apim",
+    "text": "APIM. Cache store policy. ¿Atributo duration?",
+    "options": [
+      "A. Segundos",
+      "B. Minutos",
+      "C. Horas",
+      "D. Días"
+    ],
+    "correct": "A",
+    "explanation": "La duración se especifica en segundos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 235,
+    "topic": "apim",
+    "text": "APIM. Tracing. ¿Qué header habilita?",
+    "options": [
+      "A. Ocp-Apim-Trace",
+      "B. Ocp-Apim-Subscription-Key",
+      "C. Ocp-Apim-Product",
+      "D. Ocp-Apim-User"
+    ],
+    "correct": "A",
+    "explanation": "Ocp-Apim-Trace: true habilita tracing.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 236,
+    "topic": "apim",
+    "text": "APIM. Request tracing. ¿Qué información incluye?",
+    "options": [
+      "A. Request/response",
+      "B. Políticas aplicadas",
+      "C. Errores",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Incluye toda la información de procesamiento.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 237,
+    "topic": "apim",
+    "text": "APIM. Mock responses. ¿Para qué sirven?",
+    "options": [
+      "A. Pruebas sin backend",
+      "B. Desarrollo",
+      "C. Prototipos",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Útil para desarrollo y pruebas sin backend real.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 238,
+    "topic": "apim",
+    "text": "APIM. Transform policies. ¿Set-header hace?",
+    "options": [
+      "A. Añade header",
+      "B. Modifica header",
+      "C. Elimina header",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Permite añadir, modificar o eliminar headers.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 239,
+    "topic": "apim",
+    "text": "APIM. Set-body policy. ¿Qué puede hacer?",
+    "options": [
+      "A. Reemplazar body",
+      "B. Transformar XML/JSON",
+      "C. Añadir propiedades",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Puede reemplazar, transformar y añadir contenido.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 240,
+    "topic": "apim",
+    "text": "APIM. Forward-request policy. ¿Qué hace?",
+    "options": [
+      "A. Reenvía al backend",
+      "B. Cachea respuesta",
+      "C. Loggea request",
+      "D. Valida token"
+    ],
+    "correct": "A",
+    "explanation": "Reenvía la solicitud al servicio backend.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 241,
+    "topic": "security",
+    "text": "E-commerce con Key Vault. Sign-ins seguros con App Service auth y AAD. ¿Qué hacer?",
+    "options": [
+      "A. az keyvault secret",
+      "B. Habilitar Azure AD Connect",
+      "C. Habilitar Managed Identity",
+      "D. Crear service principal"
+    ],
+    "correct": "C",
+    "explanation": "MSI permite acceso a Key Vault sin credenciales.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 242,
+    "topic": "security",
+    "text": "Key Vault con PowerShell. Objetos borrados conservados 90 días. ¿Parámetros?",
+    "options": [
+      "A. EnabledForDeployment",
+      "B. EnablePurgeProtection",
+      "C. EnabledForTemplateDeployment",
+      "D. EnableSoftDelete"
+    ],
+    "correct": "B,D",
+    "explanation": "Soft-delete + purge protection.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 243,
+    "topic": "security",
+    "text": "Transferir datos entre on-premises y Blob. Recuperar borrado accidental 90 días. ¿Comando?",
+    "options": [
+      "A. Add-AzKeyVaultKey",
+      "B. az keyvault update --enable-soft-delete true --enable-purge-protection true",
+      "C. Implementar service endpoints",
+      "D. az keyvault update --enable-soft-delete false"
+    ],
+    "correct": "B",
+    "explanation": "Soft-delete y purge protection.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 244,
+    "topic": "security",
+    "text": "Azure AD tenant. MFA con conditional access para Azure portal. ¿Tres configuraciones?",
+    "options": [
+      "A. Users and groups",
+      "B. Cloud apps = Microsoft Azure Management",
+      "C. Require MFA",
+      "D. Session lifetime"
+    ],
+    "correct": "A,B,C",
+    "explanation": "Asignar usuarios, app cloud, y requerir MFA.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 245,
+    "topic": "security",
+    "text": "Azure SQL con AD auth. Desarrolladores conectan con SSMS usando cuenta AD local. Minimizar prompts. ¿Qué usar?",
+    "options": [
+      "A. Azure AD token",
+      "B. Azure MFA",
+      "C. Active Directory integrated authentication",
+      "D. OATH tokens"
+    ],
+    "correct": "C",
+    "explanation": "Integrated usa credenciales actuales.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 246,
+    "topic": "security",
+    "text": "Web App con feature flags de App Configuration. Usar flag sin reiniciar, validar usuarios. ¿Código?",
+    "options": [
+      "A. UseAuthentication, UseAuthorization, UseAzureAppConfiguration",
+      "B. UseAzureAppConfiguration, UseAuthorization, UseAuthentication",
+      "C. UseAuthentication, UseAzureAppConfiguration, UseAuthorization",
+      "D. UseAuthorization, UseAuthentication, UseAzureAppConfiguration"
+    ],
+    "correct": "A",
+    "explanation": "Auth → Authz → App Config.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 247,
+    "topic": "security",
+    "text": "App Service y Function Apps. Secretos en Key Vault. No almacenar secretos. Minimizar cambios AD. ¿Diseño?",
+    "options": [
+      "A. User-assigned MI para todas",
+      "B. Service Principal con client secret",
+      "C. System-assigned MI en cada App",
+      "D. Service Principal por app con certificado"
+    ],
+    "correct": "C",
+    "explanation": "Key Vault references solo soporta system-assigned.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 248,
+    "topic": "security",
+    "text": "API de Azure. Autenticación sin credenciales. ¿Mecanismo?",
+    "options": [
+      "A. Basic",
+      "B. Anonymous",
+      "C. Managed identity",
+      "D. Client certificate"
+    ],
+    "correct": "C",
+    "explanation": "Managed identity.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 249,
+    "topic": "security",
+    "text": "App Service web app. Autenticación con Azure AD. ¿Qué hacer primero?",
+    "options": [
+      "A. Añadir identity provider",
+      "B. Mapear DNS",
+      "C. Crear app setting",
+      "D. Añadir certificado"
+    ],
+    "correct": "A",
+    "explanation": "Primero configurar el identity provider.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 250,
+    "topic": "security",
+    "text": "Key Vault. Enforce cryptographic algorithm. ¿Qué usar?",
+    "options": [
+      "A. Secret versioning",
+      "B. Azure Policy",
+      "C. Key Vault Firewall",
+      "D. Access policies"
+    ],
+    "correct": "B",
+    "explanation": "Azure Policy puede auditar o denegar algoritmos no permitidos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 251,
+    "topic": "security",
+    "text": "Key Vault. Bring Your Own Key (BYOK). ¿Secuencia?",
+    "options": [
+      "A. Generar KEK → Recuperar public key → Generar transfer blob → Importar",
+      "B. Importar → Generar KEK → Recuperar key → Generar blob",
+      "C. Recuperar key → Generar KEK → Generar blob → Importar",
+      "D. Generar blob → Recuperar key → Generar KEK → Importar"
+    ],
+    "correct": "A",
+    "explanation": "Secuencia correcta de BYOK.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 252,
+    "topic": "security",
+    "text": "Logic App con Function App. Acceso seguro a Blob. Recursos se mantienen si se borra Logic App. ¿Qué identidad?",
+    "options": [
+      "A. User-assigned managed identity",
+      "B. Custom role",
+      "C. Key Vault",
+      "D. System-assigned managed identity"
+    ],
+    "correct": "A",
+    "explanation": "User-assigned persiste independientemente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 253,
+    "topic": "security",
+    "text": "Web App con Azure AD. Permisos por grupo. Mostrar foto y email. ¿Qué configurar en Graph?",
+    "options": [
+      "A. User.Read",
+      "B. User.ReadBasic.All",
+      "C. Profile",
+      "D. Email"
+    ],
+    "correct": "A",
+    "explanation": "User.Read permite leer perfil completo.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 254,
+    "topic": "security",
+    "text": "Azure Storage. Customer-provided keys para encriptación. ¿Qué propiedad?",
+    "options": [
+      "A. CustomerProvidedKey",
+      "B. EncryptionKey",
+      "C. CustomerKey",
+      "D. ProvidedKey"
+    ],
+    "correct": "A",
+    "explanation": "CustomerProvidedKey es la propiedad correcta.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 255,
+    "topic": "security",
+    "text": "App Service. Managed identity. ¿Qué parámetro PowerShell?",
+    "options": [
+      "A. -IdentityType SystemAssigned",
+      "B. -AssignIdentity",
+      "C. -EnableMSI",
+      "D. -SetMSI"
+    ],
+    "correct": "A",
+    "explanation": "-IdentityType SystemAssigned habilita MSI.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 256,
+    "topic": "security",
+    "text": "Key Vault. Access policy para aplicación. ¿Qué permiso mínimo para leer secretos?",
+    "options": [
+      "A. Get",
+      "B. List",
+      "C. Read",
+      "D. Decrypt"
+    ],
+    "correct": "A",
+    "explanation": "Get permite leer secretos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 257,
+    "topic": "security",
+    "text": "Key Vault. RBAC vs Access policies. ¿Cuál es más moderno?",
+    "options": [
+      "A. RBAC",
+      "B. Access policies",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "A",
+    "explanation": "RBAC es el modelo más moderno y recomendado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 258,
+    "topic": "security",
+    "text": "Azure AD. Application manifest. ¿Atributo para group claims?",
+    "options": [
+      "A. groupMembershipClaims",
+      "B. groupClaims",
+      "C. memberOf",
+      "D. groups"
+    ],
+    "correct": "A",
+    "explanation": "groupMembershipClaims = 'All' o 'SecurityGroup'.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 259,
+    "topic": "security",
+    "text": "Azure AD. OAuth2 implicit flow. ¿Qué atributo habilitar?",
+    "options": [
+      "A. oauth2AllowImplicitFlow",
+      "B. oauth2AllowCodeFlow",
+      "C. implicitFlowEnabled",
+      "D. allowImplicit"
+    ],
+    "correct": "A",
+    "explanation": "oauth2AllowImplicitFlow = true para SPA.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 260,
+    "topic": "security",
+    "text": "Azure AD. Single-page application (SPA). ¿Qué flujo OAuth2?",
+    "options": [
+      "A. Authorization code + PKCE",
+      "B. Implicit flow",
+      "C. Client credentials",
+      "D. Resource owner"
+    ],
+    "correct": "A",
+    "explanation": "Authorization code con PKCE es el recomendado actualmente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 261,
+    "topic": "security",
+    "text": "Azure AD. Daemon app (server-to-server). ¿Qué flujo?",
+    "options": [
+      "A. Authorization code",
+      "B. Implicit flow",
+      "C. Client credentials",
+      "D. Device code"
+    ],
+    "correct": "C",
+    "explanation": "Client credentials para aplicaciones sin usuario.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 262,
+    "topic": "security",
+    "text": "Azure AD. Mobile app offline access. ¿Qué permiso?",
+    "options": [
+      "A. offline_access",
+      "B. openid",
+      "C. profile",
+      "D. email"
+    ],
+    "correct": "A",
+    "explanation": "offline_access permite refresh tokens.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 263,
+    "topic": "security",
+    "text": "Key Vault. Soft-delete. ¿Días máximos?",
+    "options": [
+      "A. 7",
+      "B. 30",
+      "C. 90",
+      "D. 180"
+    ],
+    "correct": "C",
+    "explanation": "Soft-delete permite hasta 90 días.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 264,
+    "topic": "security",
+    "text": "Key Vault. Purge protection. ¿Cuándo se puede deshabilitar?",
+    "options": [
+      "A. Nunca",
+      "B. Después de 90 días",
+      "C. Después de purgar",
+      "D. Solo al crear"
+    ],
+    "correct": "A",
+    "explanation": "Una vez habilitada, no se puede deshabilitar.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 265,
+    "topic": "security",
+    "text": "Key Vault. Firewall. ¿Qué IP permitir para Azure services?",
+    "options": [
+      "A. 168.63.129.16",
+      "B. 169.254.169.254",
+      "C. 0.0.0.0/0",
+      "D. 10.0.0.0/8"
+    ],
+    "correct": "A",
+    "explanation": "168.63.129.16 es la IP de Azure Load Balancer.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 266,
+    "topic": "security",
+    "text": "Key Vault. Private endpoint. ¿Qué servicio de Azure?",
+    "options": [
+      "A. Private Link",
+      "B. Service Endpoint",
+      "C. VPN Gateway",
+      "D. ExpressRoute"
+    ],
+    "correct": "A",
+    "explanation": "Private Link permite endpoint privado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 267,
+    "topic": "security",
+    "text": "Azure AD. Conditional access. ¿Qué no puede controlar?",
+    "options": [
+      "A. IP",
+      "B. Device",
+      "C. Application",
+      "D. Database row"
+    ],
+    "correct": "D",
+    "explanation": "Conditional access no controla a nivel de fila.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 268,
+    "topic": "security",
+    "text": "Azure AD. Managed identity. ¿Tipos?",
+    "options": [
+      "A. System-assigned",
+      "B. User-assigned",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Soporta system-assigned y user-assigned.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 269,
+    "topic": "security",
+    "text": "Azure AD. Service principal. ¿Qué es?",
+    "options": [
+      "A. Identidad de aplicación",
+      "B. Usuario",
+      "C. Grupo",
+      "D. Rol"
+    ],
+    "correct": "A",
+    "explanation": "Service principal es la identidad de la aplicación.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 270,
+    "topic": "security",
+    "text": "Key Vault. Rotación de secretos. ¿Evento para notificar?",
+    "options": [
+      "A. SecretNearExpiry",
+      "B. SecretExpired",
+      "C. SecretChanged",
+      "D. SecretRotated"
+    ],
+    "correct": "A",
+    "explanation": "SecretNearExpiry notifica antes de expirar.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 271,
+    "topic": "security",
+    "text": "Key Vault. Azure Functions. ¿Cómo acceder a secretos?",
+    "options": [
+      "A. Key Vault references",
+      "B. App settings",
+      "C. Environment variables",
+      "D. Connection strings"
+    ],
+    "correct": "A",
+    "explanation": "Key Vault references es la forma declarativa.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 272,
+    "topic": "security",
+    "text": "Azure AD. B2B collaboration. ¿Qué permite?",
+    "options": [
+      "A. Invitar usuarios externos",
+      "B. SSO con identidades externas",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "B2B permite invitar y SSO.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 273,
+    "topic": "security",
+    "text": "Azure AD. B2C. ¿Para qué sirve?",
+    "options": [
+      "A. Autenticación de clientes",
+      "B. Social logins",
+      "C. User flows",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "B2C es para identidades de clientes externos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 274,
+    "topic": "security",
+    "text": "Azure AD. Custom roles. ¿Qué se puede definir?",
+    "options": [
+      "A. Permisos específicos",
+      "B. Asignar a usuarios",
+      "C. Asignar a grupos",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Roles personalizados con permisos específicos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 275,
+    "topic": "security",
+    "text": "Azure AD. PIM (Privileged Identity Management). ¿Para qué?",
+    "options": [
+      "A. Acceso just-in-time",
+      "B. Aprobaciones",
+      "C. Auditoría",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "PIM gestiona acceso privilegiado.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 276,
+    "topic": "security",
+    "text": "Key Vault. Managed HSM. ¿Qué ofrece?",
+    "options": [
+      "A. HSM validado FIPS 140-2 Level 3",
+      "B. Mayor control",
+      "C. Single-tenant",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Managed HSM ofrece mayor seguridad.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 277,
+    "topic": "security",
+    "text": "Key Vault. Certificados. ¿Formato de importación?",
+    "options": [
+      "A. PFX",
+      "B. PEM",
+      "C. CER",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Soporta múltiples formatos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 278,
+    "topic": "security",
+    "text": "Key Vault. Secrets. ¿Tamaño máximo?",
+    "options": [
+      "A. 25 KB",
+      "B. 100 KB",
+      "C. 1 MB",
+      "D. 25 MB"
+    ],
+    "correct": "A",
+    "explanation": "El tamaño máximo es 25 KB.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 279,
+    "topic": "security",
+    "text": "Azure AD. App registrations. ¿Qué es el Application ID?",
+    "options": [
+      "A. Identificador único",
+      "B. Client ID",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Application ID y Client ID son el mismo valor.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 280,
+    "topic": "security",
+    "text": "Azure AD. Tokens. ¿Qué claim identifica al usuario de forma única?",
+    "options": [
+      "A. oid",
+      "B. sub",
+      "C. upn",
+      "D. email"
+    ],
+    "correct": "A",
+    "explanation": "oid (object id) es inmutable y único.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 281,
+    "topic": "monitoring",
+    "text": "Web app en múltiples regiones. Alertas cuando CPU >85% en 5 min. Minimizar costos. ¿Comando?",
+    "options": [
+      "A. az monitor metrics alert create --condition 'avg Percentage CPU > 85'",
+      "B. az monitor alert create --cpu 85",
+      "C. az webapp alert add --cpu 85",
+      "D. az metrics alert --cpu 85"
+    ],
+    "correct": "A",
+    "explanation": "Comando correcto para metric alert.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 282,
+    "topic": "monitoring",
+    "text": "Log Analytics workspace. Alertas con dimensiones. Minimizar tiempo creación. ¿Tipo de señal?",
+    "options": [
+      "A. Activity log",
+      "B. Application Log",
+      "C. Metric",
+      "D. Audit Log"
+    ],
+    "correct": "C",
+    "explanation": "Metric alerts son más rápidas de crear.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 283,
+    "topic": "monitoring",
+    "text": "App Service con Application Insights. Probar disponibilidad desde varios puntos. ¿Tipos de test?",
+    "options": [
+      "A. Integration",
+      "B. Multi-step web",
+      "C. URL ping",
+      "D. Unit"
+    ],
+    "correct": "B,C",
+    "explanation": "Multi-step y URL ping tests.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 284,
+    "topic": "monitoring",
+    "text": "ASP.NET Core Web API con Application Insights. Tracking de dependencias a BD no SQL Server. ¿Propiedades?",
+    "options": [
+      "A. Telemetry.Id",
+      "B. Telemetry.Context.Operation.Id",
+      "C. Telemetry.Name",
+      "D. Telemetry.Context.Session.Id"
+    ],
+    "correct": "A,B",
+    "explanation": "Id y Operation.Id para correlación.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 285,
+    "topic": "monitoring",
+    "text": "Azure Functions. Live Metrics Stream. ¿Para qué sirve?",
+    "options": [
+      "A. Ver métricas en tiempo real",
+      "B. Validar despliegues",
+      "C. Monitorear fallos",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Live Metrics muestra métricas con ~1s de latencia.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 286,
+    "topic": "monitoring",
+    "text": "Application Insights. Smart Detection. ¿Qué detecta?",
+    "options": [
+      "A. Fallos anómalos",
+      "B. Problemas de rendimiento",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Detecta fallos y problemas de rendimiento.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 287,
+    "topic": "monitoring",
+    "text": "Application Insights. Snapshot Debugger. ¿Qué captura?",
+    "options": [
+      "A. Snapshot de excepciones",
+      "B. Variables",
+      "C. Stack trace",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Captura snapshot completo al lanzar excepción.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 288,
+    "topic": "monitoring",
+    "text": "Application Insights. Profiler. ¿Qué hace?",
+    "options": [
+      "A. Captura trazas de rendimiento",
+      "B. Identifica código 'hot'",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Profiler identifica código que consume más tiempo.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 289,
+    "topic": "monitoring",
+    "text": "Application Insights. Sampling. ¿Para qué sirve?",
+    "options": [
+      "A. Reducir tráfico",
+      "B. Reducir costos",
+      "C. Preservar estadísticas",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Sampling reduce volumen manteniendo exactitud estadística.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 290,
+    "topic": "monitoring",
+    "text": "Application Insights. Telemetry initializers. ¿Qué permiten?",
+    "options": [
+      "A. Añadir propiedades globales",
+      "B. Sobrescribir comportamiento",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Permiten modificar telemetry antes de enviar.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 291,
+    "topic": "monitoring",
+    "text": "Application Insights. Telemetry processors. ¿Qué permiten?",
+    "options": [
+      "A. Filtrar telemetría",
+      "B. Modificar telemetría",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Filtran o modifican telemetría.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 292,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Action groups. ¿Qué pueden hacer?",
+    "options": [
+      "A. Enviar email",
+      "B. Llamar webhook",
+      "C. Ejecutar función",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Soportan múltiples acciones de alerta.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 293,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Alert processing rules. ¿Qué permiten?",
+    "options": [
+      "A. Suprimir alertas",
+      "B. Modificar acción groups",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Permiten suprimir o modificar alertas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 294,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Activity log. ¿Qué registra?",
+    "options": [
+      "A. Operaciones de control",
+      "B. Datos de aplicación",
+      "C. Métricas",
+      "D. Logs de contenedor"
+    ],
+    "correct": "A",
+    "explanation": "Activity log registra operaciones de gestión.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 295,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Diagnostic settings. ¿A dónde pueden enviar logs?",
+    "options": [
+      "A. Storage account",
+      "B. Event Hub",
+      "C. Log Analytics",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Soportan múltiples destinos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 296,
+    "topic": "monitoring",
+    "text": "Azure Monitor. VM insights. ¿Qué necesita?",
+    "options": [
+      "A. Log Analytics workspace",
+      "B. VMInsights solution",
+      "C. Agente",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Requiere workspace, solution y agente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 297,
+    "topic": "monitoring",
+    "text": "Application Insights. Availability tests. ¿Tipos?",
+    "options": [
+      "A. URL ping",
+      "B. Multi-step",
+      "C. Custom TrackAvailability",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Soporta los tres tipos de tests.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 298,
+    "topic": "monitoring",
+    "text": "Application Insights. Funnels. ¿Qué analizan?",
+    "options": [
+      "A. Conversión por pasos",
+      "B. Abandono",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Funnels analizan progresión y abandono.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 299,
+    "topic": "monitoring",
+    "text": "Application Insights. User Flows. ¿Qué muestran?",
+    "options": [
+      "A. Navegación entre páginas",
+      "B. Abandono",
+      "C. Repetición de acciones",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Muestran cómo navegan los usuarios.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 300,
+    "topic": "monitoring",
+    "text": "Application Insights. Impact. ¿Qué analiza?",
+    "options": [
+      "A. Impacto de lentitud",
+      "B. Conversión de usuarios",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Analiza cómo afecta la lentitud a la conversión.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 301,
+    "topic": "monitoring",
+    "text": "Application Insights. Retention. ¿Qué analiza?",
+    "options": [
+      "A. Retorno de usuarios",
+      "B. Frecuencia de acciones",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Analiza retención y comportamiento.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 302,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Log Analytics. ¿Lenguaje de consulta?",
+    "options": [
+      "A. KQL",
+      "B. SQL",
+      "C. PromQL",
+      "D. GraphQL"
+    ],
+    "correct": "A",
+    "explanation": "Kusto Query Language (KQL).",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 303,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Workbooks. ¿Para qué sirven?",
+    "options": [
+      "A. Visualizaciones interactivas",
+      "B. Dashboards",
+      "C. Análisis",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Workbooks permiten visualizaciones avanzadas.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 304,
+    "topic": "monitoring",
+    "text": "Application Insights. Live Metrics. ¿Latencia?",
+    "options": [
+      "A. 1 segundo",
+      "B. 5 segundos",
+      "C. 10 segundos",
+      "D. 30 segundos"
+    ],
+    "correct": "A",
+    "explanation": "Live Metrics tiene ~1 segundo de latencia.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 305,
+    "topic": "monitoring",
+    "text": "Application Insights. Adaptive sampling. ¿Cómo funciona?",
+    "options": [
+      "A. Ajusta automáticamente",
+      "B. Mantiene estadísticas",
+      "C. Reduce tráfico",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Sampling adaptativo mantiene exactitud.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 306,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Metric alerts. ¿Qué soportan?",
+    "options": [
+      "A. Dimensiones",
+      "B. Dynamic thresholds",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Soportan dimensiones y umbrales dinámicos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 307,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Log alerts. ¿Frecuencia?",
+    "options": [
+      "A. Cada 1 minuto",
+      "B. Cada 5 minutos",
+      "C. Cada 15 minutos",
+      "D. Configurable"
+    ],
+    "correct": "D",
+    "explanation": "La frecuencia es configurable.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 308,
+    "topic": "monitoring",
+    "text": "Application Insights. Distributed tracing. ¿Qué permite?",
+    "options": [
+      "A. Seguir solicitud",
+      "B. Correlacionar componentes",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Permite seguimiento de extremo a extremo.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 309,
+    "topic": "monitoring",
+    "text": "Application Insights. OpenTelemetry. ¿Qué es?",
+    "options": [
+      "A. Estándar",
+      "B. SDK unificado",
+      "C. Reemplazo",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "OpenTelemetry es el estándar de facto.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 310,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Container insights. ¿Para qué sirve?",
+    "options": [
+      "A. Monitorizar AKS",
+      "B. Monitorizar ACI",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Monitoriza AKS y ACI.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 311,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Network insights. ¿Qué monitorea?",
+    "options": [
+      "A. Application Gateway",
+      "B. Load Balancer",
+      "C. Firewall",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Monitorea múltiples servicios de red.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 312,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Storage insights. ¿Qué muestra?",
+    "options": [
+      "A. Capacidad",
+      "B. Transacciones",
+      "C. Latencia",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Muestra métricas completas de storage.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 313,
+    "topic": "monitoring",
+    "text": "Application Insights. Work item integration. ¿Qué permite?",
+    "options": [
+      "A. Crear issues",
+      "B. Azure DevOps",
+      "C. GitHub",
+      "D. Todos"
+    ],
+    "correct": "D",
+    "explanation": "Integración con sistemas de seguimiento.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 314,
+    "topic": "monitoring",
+    "text": "Application Insights. Annotations. ¿Para qué sirven?",
+    "options": [
+      "A. Marcar despliegues",
+      "B. Eventos",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Annotations marcan despliegues y eventos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 315,
+    "topic": "monitoring",
+    "text": "Azure Monitor. Data Collection Rules (DCR). ¿Para qué?",
+    "options": [
+      "A. Configurar recolección",
+      "B. Transformar datos",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "DCR configuran y transforman recolección.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 316,
+    "topic": "monitoring",
+    "text": "Application Insights. Connection string vs Instrumentation key. ¿Cuál es más nuevo?",
+    "options": [
+      "A. Connection string",
+      "B. Instrumentation key",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "A",
+    "explanation": "Connection string es el método más moderno.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 317,
+    "topic": "monitoring",
+    "text": "Azure Monitor. SCOM managed instance. ¿Para qué?",
+    "options": [
+      "A. Migrar SCOM",
+      "B. Compatibilidad",
+      "C. Ambos",
+      "D. Ninguno"
+    ],
+    "correct": "C",
+    "explanation": "Para migrar y mantener compatibilidad con SCOM.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 318,
+    "topic": "monitoring",
+    "text": "¿Qué consulta KQL usarías en Application Insights para listar las 10 excepciones más frecuentes en las últimas 24 horas?",
+    "options": [
+      "A. exceptions | summarize count() by problemId | top 10 by count_",
+      "B. exceptions | take 10 | order by timestamp desc",
+      "C. exceptions | where timestamp > ago(24h) | summarize count() by outerMessage | top 10 by count_",
+      "D. traces | resultType == 'Exception' | count"
+    ],
+    "correct": "C",
+    "explanation": "Summarize count() by outerMessage agrupa por el mensaje de error, y top 10 obtiene las más frecuentes.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 319,
+    "topic": "monitoring",
+    "text": "Quieres configurar una regla de autoescalado basada en la memoria RAM utilizada. ¿Qué métrica de Azure Monitor debes seleccionar?",
+    "options": [
+      "A. Average Percentage CPU",
+      "B. Private Bytes",
+      "C. Memory Working Set",
+      "D. Committed Bytes"
+    ],
+    "correct": "C",
+    "explanation": "Memory Working Set es la métrica estándar para medir el consumo real de RAM en App Services.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 320,
+    "topic": "monitoring",
+    "text": "Necesitas que una alerta de Azure Monitor notifique automáticamente a un sistema externo de tickets mediante una API REST. ¿Qué tipo de acción debes añadir al Action Group?",
+    "options": [
+      "A. Email/SMS/Push/Voice",
+      "B. ITSM",
+      "C. Webhook",
+      "D. Logic App"
+    ],
+    "correct": "C",
+    "explanation": "Webhooks permiten enviar un payload JSON a cualquier endpoint HTTP REST externo.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 321,
+    "topic": "monitoring",
+    "text": "Estás analizando el comportamiento de los usuarios en tu web. ¿Qué herramienta de Application Insights te permite visualizar la secuencia de páginas que visitan los usuarios antes de salir?",
+    "options": [
+      "A. Funnels",
+      "B. User Flows",
+      "C. Impact",
+      "D. Retention"
+    ],
+    "correct": "B",
+    "explanation": "User Flows muestra visualmente los caminos que toman los usuarios a través de las páginas del sitio.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 322,
+    "topic": "monitoring",
+    "text": "¿Cuál es la latencia típica del Live Metrics Stream en Application Insights?",
+    "options": [
+      "A. Menos de 1 segundo",
+      "B. Aproximadamente 1 minuto",
+      "C. 5 minutos",
+      "D. Depende del plan de precios"
+    ],
+    "correct": "A",
+    "explanation": "Live Metrics Stream ofrece una latencia cercana al tiempo real (sub-segundo).",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 323,
+    "topic": "security",
+    "text": "Quieres delegar la administración de claves en un Key Vault a un usuario sin darle acceso a los datos de los secretos. ¿Qué modelo de permisos es el más recomendado actualmente?",
+    "options": [
+      "A. Access Policies",
+      "B. RBAC de Azure (Azure role-based access control)",
+      "C. Shared Access Signatures",
+      "D. Key Vault Firewall"
+    ],
+    "correct": "B",
+    "explanation": "Azure RBAC permite un control más granular y moderno que las políticas de acceso tradicionales.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 324,
+    "topic": "security",
+    "text": "Tienes una Web App que necesita leer secretos de un Key Vault. Queres evitar el uso de cualquier secreto o certificado en el código de la aplicación. ¿Qué debes habilitar?",
+    "options": [
+      "A. App Registration",
+      "B. Service Principal",
+      "C. Managed Identity",
+      "D. Shared Key"
+    ],
+    "correct": "C",
+    "explanation": "Managed Identity permite que el recurso de Azure se autentique contra otros servicios sin gestionar credenciales.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 325,
+    "topic": "security",
+    "text": "Necesitas limitar el acceso a un archivo en Azure Blob Storage por un tiempo limitado de 2 horas. ¿Qué mecanismo usarías?",
+    "options": [
+      "A. RBAC",
+      "B. Access Policies",
+      "C. Shared Access Signature (SAS)",
+      "D. Firewall"
+    ],
+    "correct": "C",
+    "explanation": "Las SAS permiten generar URLs con permisos y tiempos de expiración específicos.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 326,
+    "topic": "security",
+    "text": "¿Qué política de Conditional Access de Azure AD permite bloquear el acceso si un usuario intenta loguearse desde un país no autorizado?",
+    "options": [
+      "A. User risk",
+      "B. Sign-in risk",
+      "C. Locations",
+      "D. Cloud apps"
+    ],
+    "correct": "C",
+    "explanation": "La condición de 'Locations' permite definir rangos de IP o países permitidos/bloqueados.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 327,
+    "topic": "security",
+    "text": "Estás desarrollando una app que necesita consultar el perfil de 100 usuarios en Microsoft Graph. ¿Cómo optimizarías las llamadas para evitar el throttling?",
+    "options": [
+      "A. Usar consultas paralelas",
+      "B. Usar JSON Batching",
+      "C. Usar Delta Query",
+      "D. Aumentar el plan de Azure AD"
+    ],
+    "correct": "B",
+    "explanation": "JSON Batching permite combinar múltiples solicitudes en una sola llamada HTTP.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 328,
+    "topic": "apim",
+    "text": "En Azure API Management, necesitas cambiar la URL interna de un backend sin que cambie la URL pública que ven los clientes. ¿Qué política usarías?",
+    "options": [
+      "A. set-header",
+      "B. rewrite-uri",
+      "C. set-backend-service",
+      "D. forward-request"
+    ],
+    "correct": "B",
+    "explanation": "rewrite-uri modifica la ruta del recurso antes de enviarla al backend.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 329,
+    "topic": "apim",
+    "text": "Por defecto, ¿cómo espera Azure API Management recibir la 'Subscription Key' de una solicitud?",
+    "options": [
+      "A. En una cookie",
+      "B. En el cuerpo JSON",
+      "C. En un header llamado Ocp-Apim-Subscription-Key",
+      "D. Como prefijo en la URL"
+    ],
+    "correct": "C",
+    "explanation": "Ocp-Apim-Subscription-Key es el header estándar para la autenticación por suscripción.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 330,
+    "topic": "apim",
+    "text": "Quieres agrupar varias APIs y limitar el número de llamadas que un desarrollador puede hacer al día. ¿Qué concepto de APIM debes usar?",
+    "options": [
+      "A. Groups",
+      "B. Products",
+      "C. Tags",
+      "D. Subscriptions"
+    ],
+    "correct": "B",
+    "explanation": "Los Products permiten agrupar APIs y aplicar cuotas y límites de velocidad.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 331,
+    "topic": "apim",
+    "text": "Necesitas que tu API de APIM devuelva una respuesta estática (mock) para pruebas de frontend. ¿Qué sección de la política es la más adecuada para esto?",
+    "options": [
+      "A. Inbound",
+      "B. Outbound",
+      "C. Backend",
+      "D. On-error"
+    ],
+    "correct": "A",
+    "explanation": "La política de mock-response se coloca en 'inbound' para evitar llamar al backend real.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 332,
+    "topic": "serverless",
+    "text": "En Durable Functions, ¿qué patrón usarías para ejecutar múltiples tareas en paralelo y esperar a que todas terminen para procesar el resultado final?",
+    "options": [
+      "A. Function Chaining",
+      "B. Fan-out/fan-in",
+      "C. Async HTTP APIs",
+      "D. Monitor pattern"
+    ],
+    "correct": "B",
+    "explanation": "Fan-out/fan-in es el patrón diseñado para ejecución paralela y agregación de resultados.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 333,
+    "topic": "serverless",
+    "text": "Quieres que una Azure Function se ejecute cada vez que un nuevo archivo se sube a un Storage Account, pero quieres que la ejecución sea lo más rápida posible (baja latencia). ¿Qué trigger es mejor?",
+    "options": [
+      "A. Blob Trigger",
+      "B. Event Grid Trigger",
+      "C. Timer Trigger",
+      "D. Queue Trigger"
+    ],
+    "correct": "B",
+    "explanation": "Event Grid Trigger es más rápido que Blob Trigger porque este último hace polling (escaneo) del contenedor.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 334,
+    "topic": "serverless",
+    "text": "En Logic Apps, necesitas realizar una acción solo si una condición previa es falsa. ¿Qué componente del diseñador usarías?",
+    "options": [
+      "A. Switch",
+      "B. Condition (Control)",
+      "C. For Each",
+      "D. Scope"
+    ],
+    "correct": "B",
+    "explanation": "El componente Condition crea ramas True/False para bifurcar el flujo de trabajo.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 335,
+    "topic": "messaging",
+    "text": "Azure Service Bus tiene una característica para evitar procesar el mismo mensaje dos veces si el emisor falla al recibir el ACK. ¿Cómo se llama?",
+    "options": [
+      "A. Dead-lettering",
+      "B. Duplicate Detection",
+      "C. Session Correlation",
+      "D. Peek-Lock"
+    ],
+    "correct": "B",
+    "explanation": "Duplicate Detection identifica mensajes duplicados basados en su MessageId dentro de una ventana de tiempo.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 336,
+    "topic": "messaging",
+    "text": "Necesitas capturar automáticamente todos los eventos que llegan a Event Hubs y guardarlos en un Azure Data Lake en formato Avro. ¿Qué característica debes habilitar?",
+    "options": [
+      "A. Autoscale",
+      "B. Capture",
+      "C. Geo-recovery",
+      "D. Processing Units"
+    ],
+    "correct": "B",
+    "explanation": "Capture envía automáticamente los datos de streaming a un almacenamiento persistente.",
+    "difficulty": "medium",
+    "reference": ""
+  },
+  {
+    "id": 337,
+    "topic": "messaging",
+    "text": "Estás suscribiéndote a eventos de una Storage Account mediante Event Grid. Quieres filtrar para recibir solo los eventos de archivos creados en la carpeta '/images/'. ¿Qué tipo de filtro usarías?",
+    "options": [
+      "A. Advanced Filter on 'id'",
+      "B. Subject Filter (Subject Begins With)",
+      "C. Event Type Filter",
+      "D. Data Filter"
+    ],
+    "correct": "B",
+    "explanation": "El Subject de los eventos de Storage suele empezar con la ruta del blob, permitiendo filtrar por prefijo.",
+    "difficulty": "medium",
+    "reference": ""
+  }
+]
