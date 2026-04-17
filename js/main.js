@@ -110,6 +110,7 @@ function setupEventListeners() {
     };
 
     // User Identity Events
+    elements.saveUserBtn.onclick = async () => {
         const id = elements.userIdInput.value.trim();
         if (!id) return alert('Introduce un identificador');
         StorageManager.saveUserId(id);
